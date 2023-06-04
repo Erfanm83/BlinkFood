@@ -7,6 +7,7 @@ import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
+import java.util.Objects;
 public class Main extends Application {
 
     public static void main(String[] args) {
@@ -15,26 +16,30 @@ public class Main extends Application {
     @Override
     public void start(Stage stage) throws Exception {
         try {
-            Parent root = FXMLLoader.load(getClass().getResource("hello-view.fxml"));
+            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("Login.fxml")));
             Scene scene = new Scene(root);
+            stage.setX(350);
+            stage.setY(70);
             stage.setScene(scene);
             stage.show();
+//            stage.setOnCloseRequest(windowEvent -> {
+//                windowEvent.consume();
+//                exit(stage);
+//            } );
         }catch (Exception e){
             e.printStackTrace();
         }
-//        Group root1 = new Group();
         Image icon = new Image("C:\\Users\\Admin\\IdeaProjects\\BlinkFood\\BlinkFood\\src\\main\\resources\\com\\example\\image\\Icon.png");
-
         stage.getIcons().add(icon);
-        stage.setTitle("Blink_Food");
-        //********************************************** The Kharab *************************************************
-        ///For fullscreeen
-//        stage.setFullScreen(true);
-//        stage.setFullScreenExitHint("Press Esc to escape");
-//        stage.setFullScreenExitKeyCombination(KeyCombination.valueOf("Esc"));
-        //***********************************************************************************************************
+        stage.setTitle("Blink Food");
         stage.setResizable(false);
-//        stage.setScene(scene);
-//        stage.show();
     }
+//    public void exit(Stage stage) {
+//        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+//        alert.setTitle("Exit");
+//        alert.setHeaderText("Do you want to exit ?");
+//        if (alert.showAndWait().get() == ButtonType.OK) {
+//            stage.close();
+//        }
+//    }
 }

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="scenePane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.blinkfood.Controller">
+   <children>
+       <ImageView fitHeight="600.0" fitWidth="800.0" pickOnBounds="true" preserveRatio="true">
+          <image>
+              <Image url="@../image/CreateAccount.png" />
+          </image>
+       </ImageView>
+       <TextField fx:id="Username" layoutX="286.0" layoutY="140.0" opacity="0.4" prefHeight="52.0" prefWidth="202.0" promptText="Username">
+           <font>
+               <Font size="24.0" />
+           </font>
+       </TextField>
+       <TextField fx:id="Email" layoutX="564.0" layoutY="140.0" opacity="0.4" prefHeight="52.0" prefWidth="202.0" promptText="Email">
+           <font>
+               <Font size="24.0" />
+           </font>
+       </TextField>
+       <TextField fx:id="PhoneNumber" layoutX="286.0" layoutY="220.0" opacity="0.4" prefHeight="52.0" prefWidth="202.0" promptText="Phone Number">
+           <font>
+               <Font size="24.0" />
+           </font>
+       </TextField>
+       <TextField fx:id="Age" layoutX="564.0" layoutY="220.0" opacity="0.4" prefHeight="52.0" prefWidth="202.0" promptText="Age">
+           <font>
+               <Font size="24.0" />
+           </font>
+       </TextField>
+       <PasswordField fx:id="Password" layoutX="286.0" layoutY="299.0" opacity="0.4" prefHeight="52.0" prefWidth="202.0" promptText="Password">
+           <font>
+               <Font size="24.0" />
+           </font>
+       </PasswordField>
+       <PasswordField fx:id="ConfirmPassword" layoutX="564.0" layoutY="299.0" opacity="0.4" prefHeight="52.0" prefWidth="202.0" promptText="Confirm Password">
+           <font>
+               <Font size="18.0" />
+           </font>
+       </PasswordField>
+       <Button fx:id="Submit" layoutX="480.0" layoutY="393.0" mnemonicParsing="false" onAction="#CreateAccountSubmit" opacity="0.0" prefHeight="43.0" prefWidth="82.0" text="Submit" />
+       <Button layoutX="455.0" layoutY="505.0" mnemonicParsing="false" onAction="#Admin" opacity="0.0" prefHeight="50.0" prefWidth="50.0" text="Server" />
+       <Button layoutX="540.0" layoutY="505.0" mnemonicParsing="false" onAction="#Login" opacity="0.0" prefHeight="50.0" prefWidth="50.0" text="User" />
+      <Label fx:id="ErrorLabel" layoutX="291.0" layoutY="448.0" prefHeight="31.0" prefWidth="470.0" textAlignment="CENTER" textFill="#323232">
+         <font>
+            <Font name="Consolas" size="23.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

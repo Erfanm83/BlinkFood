@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="User" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.blinkfood.Controller">
+    <children>
+        <ImageView fitHeight="600.0" fitWidth="800.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../image/Login.png" />
+            </image>
+        </ImageView>
+        <TextField fx:id="LoginUsername" layoutX="400.0" layoutY="144.0" opacity="0.4" prefHeight="70.0" prefWidth="250.0" promptText="Username">
+            <font>
+                <Font size="30.0" />
+            </font>
+        </TextField>
+        <PasswordField fx:id="LoginPassword" layoutX="400.0" layoutY="282.0" opacity="0.4" prefHeight="70.0" prefWidth="250.0" promptText="Password">
+            <font>
+                <Font size="30.0" />
+            </font>
+            <opaqueInsets>
+                <Insets />
+            </opaqueInsets>
+        </PasswordField>
+        <Button fx:id="Submit" layoutX="480.0" layoutY="393.0" mnemonicParsing="false" onAction="#LoginSubmit" opacity="0.0" prefHeight="43.0" prefWidth="82.0" text="Submit" textAlignment="CENTER">
+            <opaqueInsets>
+                <Insets />
+            </opaqueInsets>
+        </Button>
+        <Button layoutX="424.0" layoutY="459.0" mnemonicParsing="false" onAction="#CreateAccount" opacity="0.0" prefHeight="34.0" prefWidth="200.0" text="Create Account" textAlignment="CENTER" />
+        <Button layoutX="455.0" layoutY="505.0" mnemonicParsing="false" onAction="#Admin" opacity="0.0" prefHeight="50.0" prefWidth="50.0" text="Server" textAlignment="CENTER" />
+        <Button layoutX="540.0" layoutY="505.0" mnemonicParsing="false" onAction="#Login" opacity="0.0" prefHeight="50.0" prefWidth="50.0" text="User" textAlignment="CENTER" />
+        <Line fx:id="line" endX="45.0" layoutX="542.0" layoutY="565.0" stroke="WHITE" strokeWidth="5.0" />
+        <Label fx:id="ErrorLabel" layoutX="301.0" layoutY="355.0" prefHeight="31.0" prefWidth="470.0" textAlignment="CENTER" textFill="#323232">
+            <font>
+                <Font name="Consolas" size="23.0" />
+            </font>
+        </Label>
+    </children>
+</AnchorPane>
