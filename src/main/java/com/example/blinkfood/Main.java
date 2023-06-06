@@ -1,32 +1,45 @@
 package com.example.blinkfood;
 
+import javafx.animation.TranslateTransition;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseEvent;
+import javafx.scene.shape.Rectangle;
 import javafx.stage.Stage;
+import javafx.util.Duration;
 
+import java.io.IOException;
 import java.util.Objects;
+
 public class Main extends Application {
 
     public static void main(String[] args) {
         launch(args);
     }
+
     @Override
     public void start(Stage stage) throws Exception {
         try {
             Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("Login.fxml")));
             Scene scene = new Scene(root);
-            stage.setX(350);
-            stage.setY(70);
-            stage.setScene(scene);
-            stage.show();
+//            stage.setX(350);
+//            stage.setY(70);
+
 //            stage.setOnCloseRequest(windowEvent -> {
 //                windowEvent.consume();
 //                exit(stage);
 //            } );
-        }catch (Exception e){
+            stage.setX(10);
+            stage.setY(10);
+
+
+            stage.setScene(scene);
+            stage.show();
+        } catch (Exception e) {
             e.printStackTrace();
         }
         Image icon = new Image("C:\\Users\\Admin\\IdeaProjects\\BlinkFood\\BlinkFood\\src\\main\\resources\\com\\example\\image\\Icon.png");

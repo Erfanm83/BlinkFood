@@ -7,7 +7,10 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
-import javafx.scene.layout.AnchorPane;
+import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.Background;
+import javafx.scene.layout.BackgroundFill;
+import javafx.scene.shape.Rectangle;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -39,8 +42,16 @@ public class Controller extends Checker {
     private TextField LoginUsername;
     @FXML
     private PasswordField LoginPassword;
-
-
+    @FXML
+    private Rectangle RectAnimation;
+    @FXML
+    private Label Name;
+    @FXML
+    private Label Cash;
+    @FXML
+    private Button Charge;
+    @FXML
+    private Button Back;
     String username;
     String email;
     String phoneNumber;
@@ -57,8 +68,6 @@ public class Controller extends Checker {
 //    @FXML
 //    private Button ButtonlogoutButton;
 //    //////////////////////////////////////////////
-
-
 //    @FXML
 //    public void Submit(ActionEvent e) {
 //        //Submit should implements as well
@@ -85,7 +94,7 @@ public class Controller extends Checker {
         }
         if (UsernameChecker(username) && EmailChecker(email) && PhoneNumberChecker(phoneNumber)
                 && AgeChecker(age) && PasswordChecker(password, confirmPassword))
-            Login(e);
+            loader(e , "Login.fxml", stage , scene);
     }
 
     public void LoginSubmit(ActionEvent e) throws IOException {
@@ -100,7 +109,7 @@ public class Controller extends Checker {
             ErrorLabel.setText("*Plz Enter Valid Input");
         }
         if (LoginUsernameChecker(loginUsername, username) && LoginPasswordChecker(loginPassword, password))
-            Restaurants(e);
+            loader(e , "Login.fxml" , stage , scene);
     }
 
     public void AdminSubmit(ActionEvent e) throws IOException {
@@ -116,66 +125,134 @@ public class Controller extends Checker {
         } catch (Exception ev) {
             ErrorLabel.setText("*Plz Enter a Valid Input");
         }
-        if (AdminUsernameChecker(adminUsername) && AdminPasswordChecker(adminPassword))
-            Restaurants(e);
+        if (AdminUsernameChecker(adminUsername) && AdminPasswordChecker(adminPassword)) {
+            loader(e ,"Restaurants.fxml", stage , scene);
+        }
     }
 
     public void CreateAccount(ActionEvent e) throws IOException {
-        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("CreateAccount.fxml")));
-        stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
-        scene = new Scene(root);
-        stage.setX(350);
-        stage.setY(70);
-        stage.setScene(scene);
-        stage.show();
+        loader(e , "CreateAccount.fxml" , stage , scene);
     }
 
     public void Login(ActionEvent e) throws IOException {
-        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("Login.fxml")));
-        stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
-        scene = new Scene(root);
-        stage.setX(350);
-        stage.setY(70);
-        stage.setScene(scene);
-        stage.show();
+        loader(e , "Login.fxml" , stage , scene);
     }
 
     public void Admin(ActionEvent e) throws IOException {
-        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("Admin.fxml")));
-        stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
-        scene = new Scene(root);
-        stage.setX(350);
-        stage.setY(70);
-        stage.setScene(scene);
-        stage.show();
+        loader(e , "Admin.fxml" , stage , scene);
     }
-
     public void Restaurants(ActionEvent e) throws IOException {
-        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("Restaurants.fxml")));
-        stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
-        scene = new Scene(root);
-        stage.setX(10);
-        stage.setY(10);
-        stage.setScene(scene);
-        stage.show();
+        loader(e , "Restaurants.fxml" , stage , scene);
     }
-    public void Sandwich(ActionEvent e){
-
+    public void loader(ActionEvent e, String address , Stage stage , Scene scene) throws IOException {
+        Parent root;
+        try {
+            root = FXMLLoader.load(Objects.requireNonNull(Controller.class.getResource(address)));
+            stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
+            scene = new Scene(root);
+            stage.setX(10);
+            stage.setY(10);
+            stage.setScene(scene);
+            stage.show();
+        }
+        catch (Exception ev){
+            System.out.println(ev);
+        }
     }
-    public void Sonnati(ActionEvent e){
-
+    public void mouseloader(MouseEvent mouseevent, String address , Stage stage , Scene scene) throws IOException {
+        Parent root;
+        try {
+            root = FXMLLoader.load(Objects.requireNonNull(Controller.class.getResource(address)));
+            stage = (Stage) ((Node) mouseevent.getSource()).getScene().getWindow();
+            scene = new Scene(root);
+            stage.setX(10);
+            stage.setY(10);
+            stage.setScene(scene);
+            stage.show();
+        }
+        catch (Exception ev){
+            System.out.println(ev);
+        }
     }
-    public void Pizza(ActionEvent e){
-
+    public void Sonnati(MouseEvent event) throws IOException {
+        mouseloader(event , "Sonnati.fxml" , stage , scene);
     }
-    public void Fastfood(ActionEvent e){
-
+    public void Pizza(MouseEvent event) throws IOException {
+        mouseloader(event, "Pizza.fxml", stage, scene);
     }
-    public void Akbarjuje(ActionEvent e){
-
+    public void Fastfood(MouseEvent event) throws IOException {
+        mouseloader(event, "Fastfood.fxml", stage, scene);
     }
-    public void Cafe(ActionEvent e){
-
+    public void Sandwich(MouseEvent event) throws IOException {
+        mouseloader(event, "Sandwich.fxml", stage, scene);
+    }
+    public void Cafe(MouseEvent event) throws IOException {
+        mouseloader(event, "Cafe.fxml", stage, scene);
+    }
+    public void Akbarjuje(MouseEvent event) throws IOException {
+        mouseloader(event, "Akbarjuje.fxml", stage, scene);
+    }
+    public void UserDetails(){
+        RectAnimation.setX(0);
+        Name.setLayoutX(5);
+        Back.setLayoutX(5);
+        Charge.setLayoutX(230);
+        CashLabel.setLayoutX(230);
+    }
+    public void Backto(){
+        RectAnimation.setX(-440);
+        Name.setLayoutX(-420);
+        Charge.setLayoutX(-220);
+        Back.setLayoutX(-420);
+        CashLabel.setLayoutX(-420);
+    }
+    public void ChargeAccount(ActionEvent e){
+        System.out.println("Charge konam Barat ?");  ///چرت
+        ///Safhe Dargah
+    }
+    //تابع خرید کردم و محسابه باقیمانده
+    private void Buy(TextField Juje , Label CashLabel){
+        long remain;
+        if (AccountChecker(CashLabel.getText() , Juje.getText())) {
+            remain = Integer.parseInt(CashLabel.getText()) - Integer.parseInt(Juje.getText());
+            CashLabel.setText(String.valueOf(remain));
+            System.out.println("Kharidammmm"); //// چرت
+        }
+        else {
+            Alert accountalert = new Alert(Alert.AlertType.ERROR);
+            accountalert.setTitle("Account Error !");
+            accountalert.setHeaderText("Not Enough Cash to Buy");
+            accountalert.setContentText("Pease Charge Your Account");
+            if (accountalert.showAndWait().get() == ButtonType.OK) {
+                accountalert.close();
+            }
+        }
+    }
+    //چک میکنه که داری کدوم غذا رو خرید میکنی
+    @FXML
+    public void handleButtonClick(ActionEvent event) throws IOException{
+        Button clickedButton = (Button) event.getSource();
+        String buttonId = clickedButton.getId();
+        System.out.println(buttonId + " Mikhay Bekhari ?");   // // چرت
+        try {
+            BuyHandler(buttonId , JujeCost , CashLabel);
+            BuyHandler(buttonId , BargCost , CashLabel);
+            BuyHandler(buttonId , SoltaniCost , CashLabel);
+            BuyHandler(buttonId , BakhtiyariCost , CashLabel);
+        }
+        catch (Exception e){
+            System.out.println(e);   /// اگه ارور داد چاپ کن
+        }
+    }
+    // چک میکنه ببینه حسابت موجودی داره که خرید کنی یا نه
+    private Boolean AccountChecker(String Cash , String Cost) {
+        if (Integer.parseInt(Cash) >= Integer.parseInt(Cost))
+            return true;
+        return false;
+    }
+    private void BuyHandler(String buttonId , TextField Food , Label CashLabel){
+        if (Objects.equals(buttonId.concat("Cost"), Food.getId()))
+            Buy(Food, CashLabel);
     }
     //The Logout
 //    public void logout(ActionEvent event) {

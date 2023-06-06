@@ -1,6 +1,34 @@
 package com.example.blinkfood;
 
+import javafx.fxml.FXML;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
+import javafx.scene.input.MouseEvent;
+import javafx.scene.text.Text;
+
+import java.io.IOException;
+
 public class Checker {
+    @FXML
+    public TextField JujeCost;
+    @FXML
+    public TextField BargCost;
+    @FXML
+    public TextField SoltaniCost;
+    @FXML
+    public TextField BakhtiyariCost;
+    @FXML
+    public Button Juje;
+    @FXML
+    public Button Barg;
+    @FXML
+    public Button Soltani;
+    @FXML
+    public Button Bakhtiyari;
+    @FXML
+    public Label CashLabel;
+
     //Create Account Check
     public boolean EmailChecker(String email) {
         if (!email.isEmpty())
