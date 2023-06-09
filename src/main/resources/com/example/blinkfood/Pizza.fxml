@@ -56,27 +56,7 @@
             <Font name="Century" size="45.0" />
          </font>
       </Label>
-      <TextField alignment="TOP_RIGHT" editable="false" layoutX="152.0" layoutY="582.0" prefHeight="109.0" prefWidth="400.0" style="-fx-background-color: #960001;" text="پپرونی">
-         <font>
-            <Font size="36.0" />
-         </font>
-      </TextField>
-      <TextField alignment="TOP_RIGHT" editable="false" layoutX="600.0" layoutY="580.0" prefHeight="109.0" prefWidth="400.0" style="-fx-background-color: #960001;" text="مخلوط">
-         <font>
-            <Font size="36.0" />
-         </font>
-      </TextField>
-      <TextField alignment="TOP_RIGHT" editable="false" layoutX="602.0" layoutY="230.0" prefHeight="109.0" prefWidth="400.0" style="-fx-background-color: #960001;" text="رست بیف">
-         <font>
-            <Font size="36.0" />
-         </font>
-      </TextField>
-      <TextField alignment="TOP_RIGHT" editable="false" layoutX="152.0" layoutY="230.0" prefHeight="109.0" prefWidth="400.0" style="-fx-background-color: #960001;" text="گوشت و قارچ">
-         <font>
-            <Font size="36.0" />
-         </font>
-      </TextField>
-      <Button layoutX="629.0" layoutY="254.0" mnemonicParsing="false" prefHeight="77.0" prefWidth="121.0" style="-fx-background-color: #960001;" text="Buy">
+      <Button fx:id="RoastBeaf" layoutX="629.0" layoutY="254.0" mnemonicParsing="false" onAction="#Pizzahandlebutton" prefHeight="77.0" prefWidth="121.0" style="-fx-background-color: #960001;" text="Buy">
          <effect>
             <InnerShadow />
          </effect>
@@ -84,7 +64,7 @@
             <Font size="36.0" />
          </font>
       </Button>
-      <Button layoutX="629.0" layoutY="608.0" mnemonicParsing="false" prefHeight="77.0" prefWidth="121.0" style="-fx-background-color: #960001;" text="Buy">
+      <Button fx:id="Makhlut" layoutX="629.0" layoutY="608.0" mnemonicParsing="false" onAction="#Pizzahandlebutton" prefHeight="77.0" prefWidth="121.0" style="-fx-background-color: #960001;" text="Buy">
          <effect>
             <InnerShadow />
          </effect>
@@ -92,7 +72,7 @@
             <Font size="36.0" />
          </font>
       </Button>
-      <Button layoutX="170.0" layoutY="608.0" mnemonicParsing="false" prefHeight="77.0" prefWidth="121.0" style="-fx-background-color: #960001;" text="Buy">
+      <Button fx:id="Peperoni" layoutX="170.0" layoutY="608.0" mnemonicParsing="false" onAction="#Pizzahandlebutton" prefHeight="77.0" prefWidth="121.0" style="-fx-background-color: #960001;" text="Buy">
          <effect>
             <InnerShadow />
          </effect>
@@ -100,7 +80,7 @@
             <Font size="36.0" />
          </font>
       </Button>
-      <Button layoutX="170.0" layoutY="257.0" mnemonicParsing="false" prefHeight="77.0" prefWidth="121.0" style="-fx-background-color: #960001;" text="Buy">
+      <Button fx:id="GushtoGharch" layoutX="170.0" layoutY="257.0" mnemonicParsing="false" onAction="#Pizzahandlebutton" prefHeight="77.0" prefWidth="121.0" style="-fx-background-color: #960001;" text="Buy">
          <effect>
             <InnerShadow />
          </effect>
@@ -108,17 +88,17 @@
             <Font size="36.0" />
          </font>
       </Button>
-      <TextField alignment="TOP_RIGHT" editable="false" layoutX="768.0" layoutY="648.0" prefHeight="44.0" prefWidth="221.0" style="-fx-background-color: #960001;" text="480 ،000 ت">
+      <TextField fx:id="MakhlutCost" alignment="TOP_RIGHT" editable="false" layoutX="768.0" layoutY="648.0" prefHeight="44.0" prefWidth="221.0" style="-fx-background-color: #960001;" text="480000">
          <font>
             <Font size="20.0" />
          </font>
       </TextField>
-      <TextField alignment="TOP_RIGHT" editable="false" layoutX="320.0" layoutY="648.0" prefHeight="40.0" prefWidth="217.0" style="-fx-background-color: #960001;" text="450 ،000 ت">
+      <TextField fx:id="PeperoniCost" alignment="TOP_RIGHT" editable="false" layoutX="320.0" layoutY="648.0" prefHeight="40.0" prefWidth="217.0" style="-fx-background-color: #960001;" text="450000">
          <font>
             <Font size="20.0" />
          </font>
       </TextField>
-      <TextField alignment="TOP_RIGHT" editable="false" layoutX="775.0" layoutY="293.0" prefHeight="40.0" prefWidth="217.0" style="-fx-background-color: #960001;" text="340 ،000 ت">
+      <TextField fx:id="RoastBeafCost" alignment="TOP_RIGHT" editable="false" layoutX="775.0" layoutY="293.0" prefHeight="40.0" prefWidth="217.0" style="-fx-background-color: #960001;" text="340000">
          <font>
             <Font size="20.0" />
          </font>
@@ -138,7 +118,7 @@
             <Font size="20.0" />
          </font>
       </TextField>
-      <TextField alignment="TOP_RIGHT" editable="false" layoutX="314.0" layoutY="293.0" prefHeight="40.0" prefWidth="217.0" style="-fx-background-color: #960001;" text="240 ،000 ت">
+      <TextField fx:id="GushtoGharchCost" alignment="TOP_RIGHT" editable="false" layoutX="314.0" layoutY="293.0" prefHeight="40.0" prefWidth="217.0" style="-fx-background-color: #960001;" text="240000">
          <font>
             <Font size="20.0" />
          </font>
@@ -166,7 +146,7 @@
             <Font size="36.0" />
          </font>
       </Button>
-      <Button fx:id="Charge" alignment="CENTER" layoutX="-210.0" layoutY="672.0" mnemonicParsing="false" onAction="#ChargeAccount" prefHeight="68.0" prefWidth="197.0" style="-fx-background-color: #1e1e1e;" text="Charge" textFill="#960001">
+      <Button fx:id="Charge" alignment="CENTER" layoutX="-214.0" layoutY="666.0" mnemonicParsing="false" onAction="#ChargeAccount" prefHeight="68.0" prefWidth="197.0" style="-fx-background-color: #1e1e1e;" text="Charge" textFill="#960001">
          <effect>
             <InnerShadow />
          </effect>
@@ -179,7 +159,7 @@
             <Font size="36.0" />
          </font>
       </Label>
-      <Label fx:id="Cash" alignment="CENTER" layoutX="-200.0" layoutY="597.0" prefHeight="85.0" prefWidth="197.0" text="2,500,500 ت">
+      <Label fx:id="CashLabel" alignment="CENTER" layoutX="-210.0" layoutY="580.0" prefHeight="85.0" prefWidth="197.0" text="2500000">
          <font>
             <Font size="24.0" />
          </font>

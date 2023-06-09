@@ -57,7 +57,7 @@
             <Font size="24.0" />
          </font>
       </TextField>
-      <Button layoutX="629.0" layoutY="254.0" mnemonicParsing="false" prefHeight="77.0" prefWidth="121.0" style="-fx-background-color: #960001;" text="Buy">
+      <Button fx:id="Notella" layoutX="629.0" layoutY="254.0" mnemonicParsing="false" onAction="#Cafehandlebutton" prefHeight="77.0" prefWidth="121.0" style="-fx-background-color: #960001;" text="Buy">
          <effect>
             <InnerShadow />
          </effect>
@@ -65,7 +65,7 @@
             <Font size="36.0" />
          </font>
       </Button>
-      <Button layoutX="629.0" layoutY="608.0" mnemonicParsing="false" prefHeight="77.0" prefWidth="121.0" style="-fx-background-color: #960001;" text="Buy">
+      <Button fx:id="Pasta" layoutX="629.0" layoutY="608.0" mnemonicParsing="false" onAction="#Cafehandlebutton" prefHeight="77.0" prefWidth="121.0" style="-fx-background-color: #960001;" text="Buy">
          <effect>
             <InnerShadow />
          </effect>
@@ -73,7 +73,7 @@
             <Font size="36.0" />
          </font>
       </Button>
-      <Button layoutX="170.0" layoutY="608.0" mnemonicParsing="false" prefHeight="77.0" prefWidth="121.0" style="-fx-background-color: #960001;" text="Buy">
+      <Button fx:id="Shinsel" layoutX="170.0" layoutY="608.0" mnemonicParsing="false" onAction="#Cafehandlebutton" prefHeight="77.0" prefWidth="121.0" style="-fx-background-color: #960001;" text="Buy">
          <effect>
             <InnerShadow />
          </effect>
@@ -81,7 +81,7 @@
             <Font size="36.0" />
          </font>
       </Button>
-      <Button layoutX="170.0" layoutY="257.0" mnemonicParsing="false" prefHeight="77.0" prefWidth="121.0" style="-fx-background-color: #960001;" text="Buy">
+      <Button fx:id="Sushi" layoutX="170.0" layoutY="257.0" mnemonicParsing="false" onAction="#Cafehandlebutton" prefHeight="77.0" prefWidth="121.0" style="-fx-background-color: #960001;" text="Buy">
          <effect>
             <InnerShadow />
          </effect>
@@ -89,17 +89,17 @@
             <Font size="36.0" />
          </font>
       </Button>
-      <TextField alignment="TOP_RIGHT" editable="false" layoutX="768.0" layoutY="648.0" prefHeight="44.0" prefWidth="221.0" style="-fx-background-color: #960001;" text="480 ،000 ت">
+      <TextField fx:id="PastaCost" alignment="TOP_RIGHT" editable="false" layoutX="768.0" layoutY="648.0" prefHeight="44.0" prefWidth="221.0" style="-fx-background-color: #960001;" text="480000">
          <font>
             <Font size="20.0" />
          </font>
       </TextField>
-      <TextField alignment="TOP_RIGHT" editable="false" layoutX="320.0" layoutY="648.0" prefHeight="40.0" prefWidth="217.0" style="-fx-background-color: #960001;" text="450 ،000 ت">
+      <TextField fx:id="ShinselCost" alignment="TOP_RIGHT" editable="false" layoutX="320.0" layoutY="648.0" prefHeight="40.0" prefWidth="217.0" style="-fx-background-color: #960001;" text="450000">
          <font>
             <Font size="20.0" />
          </font>
       </TextField>
-      <TextField alignment="TOP_RIGHT" editable="false" layoutX="775.0" layoutY="293.0" prefHeight="40.0" prefWidth="217.0" style="-fx-background-color: #960001;" text="340 ،000 ت">
+      <TextField fx:id="NotellaCost" alignment="TOP_RIGHT" editable="false" layoutX="775.0" layoutY="293.0" prefHeight="40.0" prefWidth="217.0" style="-fx-background-color: #960001;" text="340000">
          <font>
             <Font size="20.0" />
          </font>
@@ -119,7 +119,7 @@
             <Font size="20.0" />
          </font>
       </TextField>
-      <TextField alignment="TOP_RIGHT" editable="false" layoutX="314.0" layoutY="293.0" prefHeight="40.0" prefWidth="217.0" style="-fx-background-color: #960001;" text="230 ،000 ت">
+      <TextField fx:id="SushiCost" alignment="TOP_RIGHT" editable="false" layoutX="314.0" layoutY="293.0" prefHeight="40.0" prefWidth="217.0" style="-fx-background-color: #960001;" text="230000">
          <font>
             <Font size="20.0" />
          </font>
@@ -160,7 +160,7 @@
             <Font size="36.0" />
          </font>
       </Label>
-      <Label fx:id="Cash" alignment="CENTER" layoutX="-210.0" layoutY="584.0" prefHeight="85.0" prefWidth="197.0" text="2,500,500 ت">
+      <Label fx:id="CashLabel" alignment="CENTER" layoutX="-210.0" layoutY="584.0" prefHeight="85.0" prefWidth="197.0" text="2500000">
          <font>
             <Font size="24.0" />
          </font>

@@ -56,7 +56,7 @@
             <Font size="24.0" />
          </font>
       </TextField>
-      <Button fx:id="Juje" layoutX="160.0" layoutY="247.0" mnemonicParsing="false" onAction="#handleButtonClick" prefHeight="77.0" prefWidth="121.0" style="-fx-background-color: #960001;" text="Buy">
+      <Button fx:id="Juje" layoutX="160.0" layoutY="247.0" mnemonicParsing="false" onAction="#AkbarJujehandlebutton" prefHeight="77.0" prefWidth="121.0" style="-fx-background-color: #960001;" text="Buy">
          <font>
             <Font size="36.0" />
          </font>
@@ -64,7 +64,7 @@
             <InnerShadow />
          </effect>
       </Button>
-      <Button fx:id="Soltani" layoutX="160.0" layoutY="598.0" mnemonicParsing="false" onAction="#handleButtonClick" prefHeight="77.0" prefWidth="121.0" style="-fx-background-color: #960001;" text="Buy">
+      <Button fx:id="Soltani" layoutX="160.0" layoutY="598.0" mnemonicParsing="false" onAction="#AkbarJujehandlebutton" prefHeight="77.0" prefWidth="121.0" style="-fx-background-color: #960001;" text="Buy">
          <effect>
             <InnerShadow />
          </effect>
@@ -72,7 +72,7 @@
             <Font size="36.0" />
          </font>
       </Button>
-      <Button fx:id="Bakhtiyari" layoutX="619.0" layoutY="598.0" mnemonicParsing="false" onAction="#handleButtonClick" prefHeight="77.0" prefWidth="121.0" style="-fx-background-color: #960001;" text="Buy">
+      <Button fx:id="Bakhtiyari" layoutX="619.0" layoutY="598.0" mnemonicParsing="false" onAction="#AkbarJujehandlebutton" prefHeight="77.0" prefWidth="121.0" style="-fx-background-color: #960001;" text="Buy">
          <effect>
             <InnerShadow />
          </effect>
@@ -80,7 +80,7 @@
             <Font size="36.0" />
          </font>
       </Button>
-      <Button fx:id="Barg" layoutX="619.0" layoutY="244.0" mnemonicParsing="false" onAction="#handleButtonClick" prefHeight="77.0" prefWidth="121.0" style="-fx-background-color: #960001;" text="Buy">
+      <Button fx:id="Barg" layoutX="619.0" layoutY="244.0" mnemonicParsing="false" onAction="#AkbarJujehandlebutton" prefHeight="77.0" prefWidth="121.0" style="-fx-background-color: #960001;" text="Buy">
          <effect>
             <InnerShadow />
          </effect>

@@ -1,46 +1,25 @@
 package com.example.blinkfood;
 
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
-import javafx.scene.input.MouseEvent;
-import javafx.scene.text.Text;
-
-import java.io.IOException;
 
 public class Checker {
     @FXML
-    public TextField JujeCost;
-    @FXML
-    public TextField BargCost;
-    @FXML
-    public TextField SoltaniCost;
-    @FXML
-    public TextField BakhtiyariCost;
-    @FXML
-    public Button Juje;
-    @FXML
-    public Button Barg;
-    @FXML
-    public Button Soltani;
-    @FXML
-    public Button Bakhtiyari;
-    @FXML
-    public Label CashLabel;
+    public TextField amountpayable ;
+
+    public TextField getAmountpayable() {
+        return amountpayable;
+    }
 
     //Create Account Check
     public boolean EmailChecker(String email) {
-        if (!email.isEmpty())
-            return true;
-        return false;
+        return !email.isEmpty() ? true : false;
     }
 
     public static boolean PhoneNumberChecker(String phoneNumber) {
         if (phoneNumber.length() != 11) {
             return false;
         }
-
         for (int i = 0; i < phoneNumber.length(); i++) {
             if (!Character.isDigit(phoneNumber.charAt(i))) {
                 return false;
@@ -50,47 +29,57 @@ public class Checker {
     }
 
     public boolean AgeChecker(int age) {
-        if (age > 18)
-            return true;
-        return false;
+        return age > 18 ? true : false;
     }
 
     public boolean PasswordChecker(String password, String confirmPassword) {
-        if (password.equals(confirmPassword))
-            return true;
-        return false;
+        return password.equals(confirmPassword) ? true : false;
     }
 
     public boolean UsernameChecker(String username) {
-        if (!username.isEmpty())
-            return true;
-        return false;
+        return !username.isEmpty() ? true : false;
     }
+
     /////////////////////////////////////////// kharab ////////////////////////////
     //Login Check
     public boolean LoginUsernameChecker(String loginUsername, String username) {
-        if (!loginUsername.isEmpty() && loginUsername.equals(username))
-            return true;
-        return false;
+        return !loginUsername.isEmpty() && loginUsername.equals(username) ? true : false;
     }
 
     public boolean LoginPasswordChecker(String loginPassword, String password) {
-        if (!loginPassword.isEmpty() && loginPassword.equals(password))
-            return true;
-        return false;
+        return !loginPassword.isEmpty() && loginPassword.equals(password) ? true : false;
     }
-    //////////////////////////////////////////////////////////
 
+    //////////////////////////////////////////////////////////
     //Admin Check
     public boolean AdminUsernameChecker(String adminUsername) {
-        if (!adminUsername.isEmpty() && adminUsername.equals("85"))
-            return true;
-        return false;
+        return !adminUsername.isEmpty() && adminUsername.equals("85") ? true : false;
     }
 
     public boolean AdminPasswordChecker(String adminPassword) {
-        if (!adminPassword.isEmpty() && adminPassword.equals("85"))
+        return !adminPassword.isEmpty() && adminPassword.equals("85") ? true : false;
+    }
+
+    public boolean CaptchaChecker(String Captcha, String Captchatxt) {
+        return Captcha.equals(Captchatxt) ? true : false;
+    }
+
+    public boolean CVV2Checker(String CVV2) {
+        return CVV2.length() >= 3 && !CVV2.equals(0) ? true : false;
+    }
+
+    public boolean CardPasswordChecker(String Cardpassword) {
+        return Cardpassword.length() >= 8 ? true : false;
+    }
+
+    public boolean ExpirationChecker(String Month, String Year) {
+        if (Month.length() == 2 && Year.length() == 2 && Integer.parseInt(Year) >= 2 && Integer.parseInt(Month) >= 1
+                && Integer.parseInt(Month) <= 12)
             return true;
         return false;
+    }
+
+    public boolean CardnumChecker(String CardNum) {
+        return CardNum.length() == 16 ? true : false ;
     }
 }
