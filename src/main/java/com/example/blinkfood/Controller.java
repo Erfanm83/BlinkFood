@@ -1,5 +1,8 @@
 package com.example.blinkfood;
 
+import javafx.animation.AnimationTimer;
+import javafx.animation.KeyFrame;
+import javafx.animation.Timeline;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -8,8 +11,10 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.shape.Rectangle;
 import javafx.stage.Stage;
+import javafx.util.Duration;
 
 import java.io.IOException;
 import java.util.Objects;
@@ -45,19 +50,20 @@ public class Controller extends Checker{
     String adminPassword;
 
     Customer customer = new Customer(phoneNumber, username, password, email, age);
-//    Applicant costomer = new Applicant(phoneNumber , username, password , confirmPassword , email , age) {
-    //    ///////////////////////////////// logout garbages
-//    @FXML
-//    private AnchorPane scenePane;
-//    @FXML
-//    private Button ButtonlogoutButton;
-//    //////////////////////////////////////////////
-//    @FXML
-//    public void Submit(ActionEvent e) {
-//        //Submit should implements as well
-//        //dakhel restuarnt
-//    }
+//    Applicant costomer = new Applicant(phoneNumber , username, password , confirmPassword , email , age) {};
+        ///////////////////////////////// logout garbages
+    @FXML
+    private AnchorPane scenePane;
+    @FXML
+    private Button ButtonlogoutButton;
+    //////////////////////////////////////////////
+    @FXML
+    public void Submit(ActionEvent e) {
+        //Submit should implements as well
+        //dakhel restuarnt
+    }
     public void CreateAccountSubmit(ActionEvent e) throws IOException {
+//        Customer customer = new Customer(phoneNumber, username, password, email, age);
         try {
             username = Username.getText();
             email = Email.getText();
@@ -65,7 +71,6 @@ public class Controller extends Checker{
             password = Password.getText();
             confirmPassword = ConfirmPassword.getText();
             age = Integer.parseInt(Age.getText());
-//            customer = new Customer(phoneNumber, username, password, email, age);
             customer.setUsername(username);
             customer.setAge(age);
             customer.setEmail(email);
@@ -370,4 +375,5 @@ public class Controller extends Checker{
 //            stage.close();
 //        }
 //    }
+
 }

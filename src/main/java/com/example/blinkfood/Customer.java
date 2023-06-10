@@ -1,10 +1,9 @@
 package com.example.blinkfood;
 
-
+import java.io.IOException;
 import java.util.*;
 
-public class Customer extends Applicant {
-
+public class Customer extends Applicant{
     //yek arraylist baray sabad kharid bezan
 
     public long wallet;
@@ -14,7 +13,7 @@ public class Customer extends Applicant {
 
     public Customer(String phoneNumber, String username, String password, String email, int age) {
         super(phoneNumber, username, password, email, age);
-        applicantKind = "customer";
+//        applicantKind = "customer";
     }
     public Customer(String username) {
         super(username);

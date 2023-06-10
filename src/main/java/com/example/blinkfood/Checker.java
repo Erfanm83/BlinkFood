@@ -1,16 +1,21 @@
 package com.example.blinkfood;
 
+import javafx.animation.KeyFrame;
+import javafx.animation.Timeline;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.util.Duration;
 
 public class Checker {
     @FXML
-    public TextField amountpayable ;
+    public TextField amountpayable = null;
 
     public TextField getAmountpayable() {
         return amountpayable;
     }
-
     //Create Account Check
     public boolean EmailChecker(String email) {
         return !email.isEmpty() ? true : false;

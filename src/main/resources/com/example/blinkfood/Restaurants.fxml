@@ -20,7 +20,7 @@
       </ImageView>
       <ImageView fitHeight="290.0" fitWidth="400.0" layoutX="150.0" layoutY="55.0" onMouseClicked="#Cafe" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../image/Restaurants/Cafe.jpg" />
+            <Image url="@../image/Foods/Cafe.jpg" />
          </image>
       </ImageView>
       <ImageView fitHeight="290.0" fitWidth="400.0" layoutX="600.0" layoutY="400.0" onMouseClicked="#Akbarjuje" pickOnBounds="true" preserveRatio="true">

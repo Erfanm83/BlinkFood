@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="1500.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.blinkfood.Controller">
+   <children>
+      <ImageView fitHeight="750.0" fitWidth="1500.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/Sonnati2.jpg" />
+         </image>
+      </ImageView>
+      <Button layoutX="20.0" layoutY="30.0" mnemonicParsing="false" onAction="#Restaurants" opacity="0.0" prefHeight="40.0" prefWidth="50.0" text="Button" />
+      <ImageView fitHeight="165.0" fitWidth="400.0" layoutX="150.0" layoutY="55.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fitHeight="165.0" fitWidth="400.0" layoutX="600.0" layoutY="400.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fitHeight="165.0" fitWidth="400.0" layoutX="147.0" layoutY="400.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fitHeight="165.0" fitWidth="400.0" layoutX="600.0" layoutY="53.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fitHeight="252.0" fitWidth="400.0" layoutX="1040.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/Restaurants/Cafe.jpg" />
+         </image>
+      </ImageView>
+      <Label alignment="TOP_LEFT" layoutX="1050.0" layoutY="333.0" prefHeight="399.0" prefWidth="442.0" text="Cafe Restaurant" textAlignment="CENTER" textFill="#323232">
+         <font>
+            <Font name="Century" size="45.0" />
+         </font>
+      </Label>
+      <TextField alignment="TOP_LEFT" editable="false" layoutX="1060.0" layoutY="594.0" prefHeight="100.0" prefWidth="422.0" style="-fx-background-color: #960001;" text="5th Baharestan ST . Num 34">
+         <effect>
+            <DropShadow />
+         </effect>
+         <font>
+            <Font size="24.0" />
+         </font>
+      </TextField>
+      <TextField alignment="TOP_LEFT" editable="false" layoutX="1060.0" layoutY="500.0" prefHeight="80.0" prefWidth="422.0" style="-fx-background-color: #960001;" text="get out : 5 Bike Delivery Available">
+         <effect>
+            <DropShadow />
+         </effect>
+         <font>
+            <Font size="24.0" />
+         </font>
+      </TextField>
+      <TextField alignment="TOP_LEFT" editable="false" layoutX="1060.0" layoutY="408.0" prefHeight="80.0" prefWidth="422.0" style="-fx-background-color: #960001;" text="Works 12AM to 12PM ">
+         <effect>
+            <DropShadow />
+         </effect>
+         <font>
+            <Font size="24.0" />
+         </font>
+      </TextField>
+      <Button fx:id="Notella" layoutX="629.0" layoutY="254.0" mnemonicParsing="false" onAction="#Cafehandlebutton" prefHeight="77.0" prefWidth="121.0" style="-fx-background-color: #960001;" text="Buy">
+         <effect>
+            <InnerShadow />
+         </effect>
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Button>
+      <Button fx:id="Pasta" layoutX="629.0" layoutY="608.0" mnemonicParsing="false" onAction="#Cafehandlebutton" prefHeight="77.0" prefWidth="121.0" style="-fx-background-color: #960001;" text="Buy">
+         <effect>
+            <InnerShadow />
+         </effect>
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Button>
+      <Button fx:id="Shinsel" layoutX="170.0" layoutY="608.0" mnemonicParsing="false" onAction="#Cafehandlebutton" prefHeight="77.0" prefWidth="121.0" style="-fx-background-color: #960001;" text="Buy">
+         <effect>
+            <InnerShadow />
+         </effect>
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Button>
+      <Button fx:id="Sushi" layoutX="170.0" layoutY="257.0" mnemonicParsing="false" onAction="#Cafehandlebutton" prefHeight="77.0" prefWidth="121.0" style="-fx-background-color: #960001;" text="Buy">
+         <effect>
+            <InnerShadow />
+         </effect>
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Button>
+      <TextField fx:id="PastaCost" alignment="TOP_RIGHT" editable="false" layoutX="768.0" layoutY="648.0" prefHeight="44.0" prefWidth="221.0" style="-fx-background-color: #960001;" text="480000">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="ShinselCost" alignment="TOP_RIGHT" editable="false" layoutX="320.0" layoutY="648.0" prefHeight="40.0" prefWidth="217.0" style="-fx-background-color: #960001;" text="450000">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="NotellaCost" alignment="TOP_RIGHT" editable="false" layoutX="775.0" layoutY="293.0" prefHeight="40.0" prefWidth="217.0" style="-fx-background-color: #960001;" text="340000">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </TextField>
+      <TextField alignment="TOP_RIGHT" editable="false" layoutX="320.0" layoutY="604.0" prefHeight="44.0" prefWidth="217.0" style="-fx-background-color: #960001;" text="شینسل 120 گرم">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </TextField>
+      <TextField alignment="TOP_RIGHT" editable="false" layoutX="767.0" layoutY="597.0" prefHeight="51.0" prefWidth="221.0" style="-fx-background-color: #960001;" text="پاستا 160 گرم">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </TextField>
+      <TextField alignment="TOP_RIGHT" editable="false" layoutX="776.0" layoutY="244.0" prefHeight="49.0" prefWidth="217.0" style="-fx-background-color: #960001;" text="نوتلا 150 گرم">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="SushiCost" alignment="TOP_RIGHT" editable="false" layoutX="314.0" layoutY="293.0" prefHeight="40.0" prefWidth="217.0" style="-fx-background-color: #960001;" text="230000">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </TextField>
+      <TextField alignment="TOP_RIGHT" editable="false" layoutX="314.0" layoutY="249.0" prefHeight="40.0" prefWidth="217.0" style="-fx-background-color: #960001;" text="سوشی 230 گرم">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </TextField>
+      <ImageView fx:id="UserProfile" fitHeight="100.0" fitWidth="100.0" layoutY="650.0" onMouseClicked="#UserDetails" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/Userprofile.jpg" />
+         </image>
+      </ImageView>
+      <Rectangle fx:id="RectAnimation" fill="#960001" height="189.0" layoutY="570.0" stroke="BLACK" strokeType="INSIDE" width="440.0" x="-440.0">
+         <effect>
+            <InnerShadow />
+         </effect>
+      </Rectangle>
+      <Button fx:id="Back" alignment="CENTER" layoutX="-410.0" layoutY="669.0" mnemonicParsing="false" onAction="#Backto" prefHeight="77.0" prefWidth="165.0" style="-fx-background-color: #1e1e1e;" text="Back" textFill="#960001">
+         <effect>
+            <DropShadow />
+         </effect>
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Button>
+      <Button fx:id="Charge" alignment="CENTER" layoutX="-210.0" layoutY="672.0" mnemonicParsing="false" onAction="#ChargeAccount" prefHeight="68.0" prefWidth="197.0" style="-fx-background-color: #1e1e1e;" text="Charge" textFill="#960001">
+         <effect>
+            <InnerShadow />
+         </effect>
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Button>
+      <Label fx:id="Name" layoutX="-410.0" layoutY="587.0" prefHeight="85.0" prefWidth="197.0" text="Saeed">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <Label fx:id="Cash" alignment="CENTER" layoutX="-210.0" layoutY="584.0" prefHeight="85.0" prefWidth="197.0" text="250 $">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+   </children>
+</Pane>

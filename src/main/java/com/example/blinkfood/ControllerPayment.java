@@ -1,5 +1,7 @@
 package com.example.blinkfood;
 
+import javafx.animation.KeyFrame;
+import javafx.animation.Timeline;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -9,7 +11,10 @@ import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
+import javafx.util.Duration;
+
 import java.io.IOException;
+import java.util.EventObject;
 import java.util.Objects;
 import java.util.Random;
 
@@ -25,6 +30,10 @@ public class ControllerPayment extends Checker{
     private Label txtCaptcha;
     @FXML
     public Button PooyaPassword;
+    @FXML
+    private Label countdownLabel;
+    private Timeline timeline;
+    private int remainingSeconds = 300;
     public void captcha(MouseEvent event) throws Exception {
         try {
             String captchaText = generateCaptchaText();
@@ -120,4 +129,52 @@ public class ControllerPayment extends Checker{
             System.out.println(e);
         }
     }
+
+    public void startTimer(MouseEvent e) {
+        timeline = new Timeline(new KeyFrame(Duration.seconds(1), event -> {
+            remainingSeconds--;
+            updateCountdownLabel();
+            if (remainingSeconds <= 0) {
+                try {
+                    stopTimer(e);
+                } catch (IOException ex) {
+                    System.out.println(ex);
+                }
+                // Perform actions when the timer reaches zero
+            }
+        }));
+        timeline.setCycleCount(Timeline.INDEFINITE);
+        timeline.play();
+    }
+
+    private void stopTimer(MouseEvent e) throws IOException {
+//        if (timeline != null) {
+            timeline.stop();
+            countdownLabel.setText("00:00");
+            // Cancel Message
+            Alert TimeOut = new Alert(Alert.AlertType.ERROR);
+            TimeOut.setTitle("Payment Time Out");
+            TimeOut.setHeaderText("Please try again later");
+            TimeOut.setContentText("You Now Redirected to Restaurants Panel...");
+            if (TimeOut.showAndWait().get() == ButtonType.OK)
+                TimeOut.close();
+            else
+                TimeOut.close();
+            // Redirectiong To Restaurants Panel
+            Parent root = FXMLLoader.load(Objects.requireNonNull(ControllerPayment.class.getResource("Restaurants.fxml")));
+            Stage stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
+            Scene scene = new Scene(root);
+            stage.setX(10);
+            stage.setY(10);
+            stage.setScene(scene);
+            stage.show();
+//        }
+    }
+
+    private void updateCountdownLabel() {
+        int minutes = remainingSeconds / 60;
+        int seconds = remainingSeconds % 60;
+        countdownLabel.setText(String.format("%02d:%02d", minutes, seconds));
+    }
+
 }
