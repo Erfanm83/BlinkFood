@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="1500.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.blinkfood.Controller">
+   <children>
+      <ImageView fitHeight="750.0" fitWidth="1500.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/Restaurants/FastFood.jpg" />
+         </image>
+      </ImageView>
+      <Button layoutX="20.0" layoutY="30.0" mnemonicParsing="false" onAction="#AdminRestaurants" opacity="0.0" prefHeight="40.0" prefWidth="50.0" text="Button" />
+      <ImageView fitHeight="242.0" fitWidth="346.0" layoutX="97.0" layoutY="51.0" pickOnBounds="true" smooth="false">
+         <image>
+            <Image url="@../image/Foods/FastFood/Bandari.jpeg" />
+         </image></ImageView>
+      <TextField alignment="CENTER" layoutX="97.0" layoutY="297.0" opacity="0.3" prefHeight="50.0" prefWidth="170.0" text="Bandari">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="BandariCost" alignment="CENTER" layoutX="270.0" layoutY="297.0" opacity="0.3" prefHeight="50.0" prefWidth="84.0" text="290000">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextField>
+      <Button fx:id="Bandari" layoutX="356.0" layoutY="297.0" mnemonicParsing="false" onAction="#FastFoodHandleButton" opacity="0.5" prefHeight="30.0" prefWidth="87.0" style="-fx-background-color: #000000;" text="Buy" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Button>
+      <ImageView fitHeight="242.0" fitWidth="346.0" layoutX="543.0" layoutY="51.0" pickOnBounds="true" smooth="false">
+         <image>
+            <Image url="@../image/Foods/FastFood/Burger.jpg" />
+         </image></ImageView>
+      <TextField alignment="CENTER" layoutX="543.0" layoutY="297.0" opacity="0.3" prefHeight="50.0" prefWidth="170.0" text="Burger">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="BurgerCost" alignment="CENTER" layoutX="715.0" layoutY="297.0" opacity="0.3" prefHeight="50.0" prefWidth="84.0" text="90000">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextField>
+      <Button fx:id="Burger" layoutX="802.0" layoutY="297.0" mnemonicParsing="false" onAction="#FastFoodHandleButton" opacity="0.5" prefHeight="30.0" prefWidth="87.0" style="-fx-background-color: #000000;" text="Buy" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Button>
+      <ImageView fitHeight="242.0" fitWidth="346.0" layoutX="97.0" layoutY="390.0" pickOnBounds="true" smooth="false">
+         <image>
+            <Image url="@../image/Foods/FastFood/Kentucky.jpg" />
+         </image></ImageView>
+      <TextField alignment="CENTER" layoutX="97.0" layoutY="635.0" opacity="0.3" prefHeight="50.0" prefWidth="170.0" text="Kentucky">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="KentuckyCost" alignment="CENTER" layoutX="270.0" layoutY="635.0" opacity="0.3" prefHeight="50.0" prefWidth="84.0" text="160000">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextField>
+      <Button fx:id="Kentucky" layoutX="356.0" layoutY="635.0" mnemonicParsing="false" onAction="#FastFoodHandleButton" opacity="0.5" prefHeight="30.0" prefWidth="87.0" style="-fx-background-color: #000000;" text="Buy" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Button>
+      <ImageView fitHeight="242.0" fitWidth="346.0" layoutX="543.0" layoutY="390.0" pickOnBounds="true" smooth="false">
+         <image>
+            <Image url="@../image/Foods/FastFood/SibZamini.jpg" />
+         </image></ImageView>
+      <TextField alignment="CENTER" layoutX="543.0" layoutY="635.0" opacity="0.3" prefHeight="50.0" prefWidth="170.0" text="Sib Zamini">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="SibZaminiCost" alignment="CENTER" layoutX="715.0" layoutY="635.0" opacity="0.3" prefHeight="50.0" prefWidth="84.0" text="310000">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextField>
+      <Button fx:id="SibZamini" layoutX="802.0" layoutY="635.0" mnemonicParsing="false" onAction="#FastFoodHandleButton" opacity="0.5" prefHeight="30.0" prefWidth="87.0" style="-fx-background-color: #000000;" text="Buy" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Button>
+      <ImageView fitHeight="296.0" fitWidth="396.0" layoutX="1050.0" layoutY="51.0" pickOnBounds="true" smooth="false">
+         <image>
+            <Image url="@../image/Foods/FastFood.jpg" />
+         </image>
+      </ImageView>
+      <TextField editable="false" layoutX="1050.0" layoutY="450.0" prefHeight="80.0" prefWidth="396.0" style="-fx-background-color: #bb0000;" text="Works 7AM to 11PM ">
+         <font>
+            <Font size="24.0" />
+         </font>
+         <effect>
+            <InnerShadow height="20.0" radius="9.5" width="20.0" />
+         </effect>
+      </TextField>
+      <TextField editable="false" layoutX="1050.0" layoutY="550.0" prefHeight="80.0" prefWidth="396.0" style="-fx-background-color: #bb0000;" text="Family lodge : 6 Tables Available">
+         <font>
+            <Font size="24.0" />
+         </font>
+         <effect>
+            <InnerShadow height="20.0" radius="9.5" width="20.0" />
+         </effect>
+      </TextField>
+      <TextField editable="false" layoutX="1050.0" layoutY="650.0" prefHeight="80.0" prefWidth="396.0" style="-fx-background-color: #bb0000;" text="45th Kosar ST .Num 34">
+         <font>
+            <Font size="24.0" />
+         </font>
+         <effect>
+            <InnerShadow height="20.0" radius="9.5" width="20.0" />
+         </effect>
+      </TextField>
+      <ImageView fx:id="UserProfile" fitHeight="70.0" fitWidth="70.0" layoutY="680.0" onMouseClicked="#UserDetails" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/Userprofile.jpg" />
+         </image>
+      </ImageView>
+      <Rectangle fx:id="RectAnimation" fill="#bb0000" height="200.0" layoutY="550.0" stroke="BLACK" strokeType="INSIDE" width="440.0" x="-440.0">
+         <effect>
+            <InnerShadow height="20.0" radius="9.5" width="20.0" />
+         </effect>
+      </Rectangle>
+      <Label fx:id="Name" alignment="CENTER" layoutX="-420.0" layoutY="570.0" prefHeight="70.0" prefWidth="190.0" text="Saeed" textFill="WHITE">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <Label fx:id="CashLabel" alignment="CENTER" layoutX="-210.0" layoutY="570.0" prefHeight="70.0" prefWidth="190.0" text="2500000" textFill="WHITE">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <Button fx:id="Back" alignment="CENTER" layoutX="-420.0" layoutY="650.0" mnemonicParsing="false" onAction="#Backto" prefHeight="70.0" prefWidth="190.0" style="-fx-background-color: #1e1e1e;" text="Back" textFill="WHITE">
+         <font>
+            <Font size="36.0" />
+         </font>
+         <effect>
+            <InnerShadow />
+         </effect>
+      </Button>
+      <Button fx:id="Charge" alignment="CENTER" layoutX="-210.0" layoutY="650.0" mnemonicParsing="false" onAction="#ChargeAccount" prefHeight="70.0" prefWidth="190.0" style="-fx-background-color: #1e1e1e;" text="Charge" textFill="WHITE">
+         <effect>
+            <InnerShadow />
+         </effect>
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Button>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="1050.0" layoutY="366.0" prefHeight="70.0" prefWidth="396.0" text="Hot Fast Food" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="Century" size="40.0" />
+         </font>
+      </Label>
+   </children>
+</Pane>

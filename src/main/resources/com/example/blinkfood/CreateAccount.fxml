@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane fx:id="scenePane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.blinkfood.Controller">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.blinkfood.Controller">
    <children>
        <ImageView fitHeight="600.0" fitWidth="800.0" pickOnBounds="true" preserveRatio="true">
           <image>
@@ -47,9 +47,9 @@
            </font>
        </PasswordField>
        <Button fx:id="Submit" layoutX="480.0" layoutY="393.0" mnemonicParsing="false" onAction="#CreateAccountSubmit" opacity="0.0" prefHeight="43.0" prefWidth="82.0" text="Submit" />
-       <Button layoutX="455.0" layoutY="505.0" mnemonicParsing="false" onAction="#Admin" opacity="0.0" prefHeight="50.0" prefWidth="50.0" text="Server" />
-       <Button layoutX="540.0" layoutY="505.0" mnemonicParsing="false" onAction="#Login" opacity="0.0" prefHeight="50.0" prefWidth="50.0" text="User" />
-      <Label fx:id="ErrorLabel" layoutX="291.0" layoutY="448.0" prefHeight="31.0" prefWidth="470.0" textAlignment="CENTER" textFill="#323232">
+       <Button layoutX="455.0" layoutY="505.0" mnemonicParsing="false" onAction="#Admin" opacity="0.0" prefHeight="50.0" prefWidth="50.0" text="Admin" />
+       <Button layoutX="540.0" layoutY="505.0" mnemonicParsing="false" onAction="#Login" opacity="0.0" prefHeight="50.0" prefWidth="50.0" text="Login" />
+      <Label fx:id="ErrorLabel" layoutX="286.0" layoutY="454.0" prefHeight="31.0" prefWidth="470.0" textAlignment="CENTER">
          <font>
             <Font name="Consolas" size="23.0" />
          </font>

@@ -40,10 +40,10 @@
             </opaqueInsets>
         </Button>
         <Button layoutX="424.0" layoutY="459.0" mnemonicParsing="false" onAction="#CreateAccount" opacity="0.0" prefHeight="34.0" prefWidth="200.0" text="Create Account" textAlignment="CENTER" />
-        <Button layoutX="455.0" layoutY="505.0" mnemonicParsing="false" onAction="#Admin" opacity="0.0" prefHeight="50.0" prefWidth="50.0" text="Server" textAlignment="CENTER" />
-        <Button layoutX="540.0" layoutY="505.0" mnemonicParsing="false" onAction="#Login" opacity="0.0" prefHeight="50.0" prefWidth="50.0" text="User" textAlignment="CENTER" />
+        <Button layoutX="455.0" layoutY="505.0" mnemonicParsing="false" onAction="#Admin" opacity="0.0" prefHeight="50.0" prefWidth="50.0" text="Admin" textAlignment="CENTER" />
+        <Button layoutX="540.0" layoutY="505.0" mnemonicParsing="false" onAction="#Login" opacity="0.0" prefHeight="50.0" prefWidth="50.0" text="Login" textAlignment="CENTER" />
         <Line fx:id="line" endX="45.0" layoutX="542.0" layoutY="565.0" stroke="WHITE" strokeWidth="5.0" />
-        <Label fx:id="ErrorLabel" layoutX="301.0" layoutY="355.0" prefHeight="31.0" prefWidth="470.0" textAlignment="CENTER" textFill="#323232">
+        <Label fx:id="ErrorLabel" layoutX="290.0" layoutY="362.0" prefHeight="31.0" prefWidth="470.0" textAlignment="CENTER">
             <font>
                 <Font name="Consolas" size="23.0" />
             </font>

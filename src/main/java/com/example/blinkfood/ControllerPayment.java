@@ -1,7 +1,5 @@
 package com.example.blinkfood;
 
-import javafx.animation.KeyFrame;
-import javafx.animation.Timeline;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -11,38 +9,35 @@ import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
-import javafx.util.Duration;
 
 import java.io.IOException;
-import java.util.EventObject;
 import java.util.Objects;
 import java.util.Random;
 
-public class ControllerPayment extends Checker{
+public class ControllerPayment extends Checker {
+    ////////////////////////////////////////Variables////////////////////////////////////////
     private static final String CHARACTERS = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
     private static final int CAPTCHA_LENGTH = 6;
     private static final int PASSWORD_LENGTH = 8;
     @FXML
-    private TextField txtcaptchavinput , Cardnumber , Email;
+    private TextField CardNumber, SecurityCard, Email;
     @FXML
-    private PasswordField CVV2 , CardPassword , ExpirationMonth ,ExpirationYear;
-    @FXML
-    private Label txtCaptcha;
+    private PasswordField CVV2, ExpirationMonth, ExpirationYear, CardPassword;
     @FXML
     public Button PooyaPassword;
     @FXML
-    private Label countdownLabel;
-    private Timeline timeline;
-    private int remainingSeconds = 300;
-    public void captcha(MouseEvent event) throws Exception {
+    private Label Captcha;
+
+    ////////////////////////////////////////Methods////////////////////////////////////////
+    public void Captcha(MouseEvent event) throws Exception {
         try {
             String captchaText = generateCaptchaText();
-            txtCaptcha.setText(captchaText);
-        }
-        catch (Exception e){
+            Captcha.setText(captchaText);
+        } catch (Exception e) {
             System.out.println(e);
         }
     }
+
     private String generateCaptchaText() {
         Random random = new Random();
         StringBuilder sb = new StringBuilder(CAPTCHA_LENGTH);
@@ -51,14 +46,15 @@ public class ControllerPayment extends Checker{
         }
         return sb.toString();
     }
+
     //Submit Payment
-    public void PaymentSubmit (ActionEvent e) throws IOException {
+    public void PaymentSubmit(ActionEvent e) throws IOException {
         try {
             //Successfully Done
-            if ( EmailChecker(Email.getText()) && CardPasswordChecker(CardPassword.getText()) &&
-                    CaptchaChecker(txtCaptcha.getText() , txtcaptchavinput.getText()) &&
-                    ExpirationChecker(ExpirationMonth.getText() , ExpirationYear.getText()) &&
-            CVV2Checker(CVV2.getText())){
+            if (EmailChecker(Email.getText()) && CardPasswordChecker(CardPassword.getText()) &&
+                    CaptchaChecker(Captcha.getText(), SecurityCard.getText()) &&
+                    ExpirationChecker(ExpirationMonth.getText(), ExpirationYear.getText()) &&
+                    CVV2Checker(CVV2.getText())) {
                 // Successfull Message
                 Alert Successfullalert = new Alert(Alert.AlertType.INFORMATION);
                 Successfullalert.setTitle("Payment Successfully Done !");
@@ -67,7 +63,7 @@ public class ControllerPayment extends Checker{
                 if (Successfullalert.showAndWait().get() == ButtonType.OK)
                     Successfullalert.close();
                 // Redirectiong To Restaurants Panel
-                Parent root = FXMLLoader.load(Objects.requireNonNull(ControllerPayment.class.getResource("Restaurants.fxml")));
+                Parent root = FXMLLoader.load(Objects.requireNonNull(ControllerPayment.class.getResource("LoginRestaurants.fxml")));
                 Stage stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
                 Scene scene = new Scene(root);
                 stage.setX(10);
@@ -85,11 +81,11 @@ public class ControllerPayment extends Checker{
                     Paymentalert.close();
                 }
             }
-        }
-        catch (Exception exception){
+        } catch (Exception exception) {
             System.out.println(exception);
         }
     }
+
     //Cancel Payment
     public void PaymentCancel(ActionEvent e) throws IOException {
         try {
@@ -101,19 +97,19 @@ public class ControllerPayment extends Checker{
             if (Successfullalert.showAndWait().get() == ButtonType.OK)
                 Successfullalert.close();
             // Redirectiong To Restaurants Panel
-            Parent root = FXMLLoader.load(Objects.requireNonNull(ControllerPayment.class.getResource("Restaurants.fxml")));
+            Parent root = FXMLLoader.load(Objects.requireNonNull(ControllerPayment.class.getResource("LoginRestaurants.fxml")));
             Stage stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
             Scene scene = new Scene(root);
             stage.setX(10);
             stage.setY(10);
             stage.setScene(scene);
             stage.show();
-        }
-        catch (Exception exception) {
+        } catch (Exception exception) {
             System.out.println(exception);
         }
     }
-    public String Passwordgenerator(ActionEvent event){
+
+    public String Passwordgenerator(ActionEvent event) {
         Random random = new Random(10);
         StringBuilder sb = new StringBuilder(PASSWORD_LENGTH);
         for (int i = 0; i < PASSWORD_LENGTH; i++) {
@@ -121,60 +117,12 @@ public class ControllerPayment extends Checker{
         }
         return sb.toString();
     }
+
     public void password(ActionEvent event) throws Exception {
         try {
             CardPassword.setText(Passwordgenerator(event));
-        }
-        catch (Exception e){
+        } catch (Exception e) {
             System.out.println(e);
         }
     }
-
-    public void startTimer(MouseEvent e) {
-        timeline = new Timeline(new KeyFrame(Duration.seconds(1), event -> {
-            remainingSeconds--;
-            updateCountdownLabel();
-            if (remainingSeconds <= 0) {
-                try {
-                    stopTimer(e);
-                } catch (IOException ex) {
-                    System.out.println(ex);
-                }
-                // Perform actions when the timer reaches zero
-            }
-        }));
-        timeline.setCycleCount(Timeline.INDEFINITE);
-        timeline.play();
-    }
-
-    private void stopTimer(MouseEvent e) throws IOException {
-//        if (timeline != null) {
-            timeline.stop();
-            countdownLabel.setText("00:00");
-            // Cancel Message
-            Alert TimeOut = new Alert(Alert.AlertType.ERROR);
-            TimeOut.setTitle("Payment Time Out");
-            TimeOut.setHeaderText("Please try again later");
-            TimeOut.setContentText("You Now Redirected to Restaurants Panel...");
-            if (TimeOut.showAndWait().get() == ButtonType.OK)
-                TimeOut.close();
-            else
-                TimeOut.close();
-            // Redirectiong To Restaurants Panel
-            Parent root = FXMLLoader.load(Objects.requireNonNull(ControllerPayment.class.getResource("Restaurants.fxml")));
-            Stage stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
-            Scene scene = new Scene(root);
-            stage.setX(10);
-            stage.setY(10);
-            stage.setScene(scene);
-            stage.show();
-//        }
-    }
-
-    private void updateCountdownLabel() {
-        int minutes = remainingSeconds / 60;
-        int seconds = remainingSeconds % 60;
-        countdownLabel.setText(String.format("%02d:%02d", minutes, seconds));
-    }
-
 }

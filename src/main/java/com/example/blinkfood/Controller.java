@@ -1,43 +1,24 @@
 package com.example.blinkfood;
 
-import javafx.animation.AnimationTimer;
-import javafx.animation.KeyFrame;
-import javafx.animation.Timeline;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Node;
-import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
-import javafx.scene.layout.AnchorPane;
 import javafx.scene.shape.Rectangle;
 import javafx.stage.Stage;
-import javafx.util.Duration;
 
+import java.io.File;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.Objects;
 
-public class Controller extends Checker{
-    private Stage stage;
-    private Scene scene;
-    /////////////////////////////////////////////////////// Identification garbages
-    @FXML
-    private TextField Username, Email, PhoneNumber, Age, AdminUsername, LoginUsername, JujeCost, BargCost, SoltaniCost, BakhtiyariCost, NotellaCost, SushiCost, PeperoniCost, PastaCost,
-            ShinselCost, MorghCost, GharchCost, KentakiCost, SibZaminiCost, RoastBeafCost, MakhlutCost, FalafelCost,
-            HamburgerCost, DoubleburgerCost, KhurakCost, GushtoGharchCost,
-            AbgushtCost, DizimessiCost, DiziahaniCost, DizisangiCost;
-    @FXML
-    private PasswordField Password, ConfirmPassword, AdminPassword, LoginPassword;
-    @FXML
-    private Rectangle RectAnimation;
-    @FXML
-    private Label Name, CashLabel, ErrorLabel;
-    @FXML
-    private Button Charge, Juje, Barg, Soltani, Bakhtiyari, Sushi, Pasta, Notella, Shinsel, Morgh, Gharch, Kentaki, SibZamini, RoastBeaf,
-            Peperoni, GushtoGharch, Makhlut, Falafel, Hamburger, Doubleburger, Khurak, Abgusht, Dizimessi, Diziahani, Dizisangi, Back;
+public class Controller extends Checker {
 
+    ////////////////////////////////////////Variables////////////////////////////////////////
+
+    ////////////////////////////////////////Strings
     String username;
     String email;
     String phoneNumber;
@@ -49,331 +30,318 @@ public class Controller extends Checker{
     String adminUsername;
     String adminPassword;
 
-    Customer customer = new Customer(phoneNumber, username, password, email, age);
-//    Applicant costomer = new Applicant(phoneNumber , username, password , confirmPassword , email , age) {};
-        ///////////////////////////////// logout garbages
+    ////////////////////////////////////////????????????????
+//    Lodge customer = new Lodge(username, email, phoneNumber, age, password);
+    private Stage stage;
+    private Scene scene;
     @FXML
-    private AnchorPane scenePane;
+    private PasswordField Password, ConfirmPassword, AdminPassword, LoginPassword;
     @FXML
-    private Button ButtonlogoutButton;
-    //////////////////////////////////////////////
+    private Rectangle RectAnimation, RectAnimation2;
     @FXML
-    public void Submit(ActionEvent e) {
-        //Submit should implements as well
-        //dakhel restuarnt
+    private Label ErrorLabel, Name, CashLabel;
+    @FXML
+    private ImageView MellatLogo, SamanLogo, SepahLogo;
+
+    ////////////////////////////////////////Buttons
+    @FXML
+    private Button KookooSabzi, Kotlet, Omlet, Soosis,
+            Bandari, Burger, Kentucky, SibZamini,
+            Jigar, Joojeh, Kabab, Shishlik,
+            Italian, Makhloot, Peperoni, Sabzijat,
+            AshReshteh, Dizi, Kashk, Sholeh,
+            Gheymeh, GhormehSabzi, Makaroni, Morgh;
+    @FXML
+    private Button Back, Charge;
+
+    ////////////////////////////////////////Text Fields
+    @FXML
+    private TextField Username, Email, PhoneNumber, Age;
+    @FXML
+    private TextField AdminUsername, LoginUsername;
+    @FXML
+    private TextField KookooSabziCost, KotletCost, OmletCost, SoosisCost,
+            BandariCost, BurgerCost, KentuckyCost, SibZaminiCost,
+            JigarCost, JoojehCost, KababCost, ShishlikCost,
+            ItalianCost, MakhlootCost, PeperoniCost, SabzijatCost,
+            AshReshtehCost, DiziCost, KashkCost, SholehCost,
+            GheymehCost, GhormehSabziCost, MakaroniCost, MorghCost;
+
+
+    ////////////////////////////////////////Methods////////////////////////////////////////
+
+    ////////////////////////////////////////Pages
+    public void CreateAccount(ActionEvent e) throws IOException {
+        Loader(e, "CreateAccount.fxml", stage, scene, 350, 70);
     }
+
+    public void Login(ActionEvent e) throws IOException {
+        Loader(e, "Login.fxml", stage, scene, 350, 70);
+    }
+
+    public void Admin(ActionEvent e) throws IOException {
+        Loader(e, "Admin.fxml", stage, scene, 350, 70);
+    }
+
+    public void LoginRestaurants(ActionEvent e) throws IOException {
+        Loader(e, "LoginRestaurants.fxml", stage, scene, 260, 10);
+    }
+
+    public void AdminRestaurants(ActionEvent e) throws IOException {
+        Loader(e, "AdminRestaurants.fxml", stage, scene, 260, 10);
+    }
+
+    ////////////////////////////////////////Login Restaurants Pages
+    public void LoginCafe(MouseEvent event) throws IOException {
+        MouseLoader(event, "LoginCafe.fxml", stage, scene);
+    }
+
+    public void LoginFastFood(MouseEvent event) throws IOException {
+        MouseLoader(event, "LoginFastFood.fxml", stage, scene);
+    }
+
+    public void LoginKababi(MouseEvent event) throws IOException {
+        MouseLoader(event, "LoginKababi.fxml", stage, scene);
+    }
+
+    public void LoginPizza(MouseEvent event) throws IOException {
+        MouseLoader(event, "LoginPizza.fxml", stage, scene);
+    }
+
+    public void LoginSonnati(MouseEvent event) throws IOException {
+        MouseLoader(event, "LoginSonnati.fxml", stage, scene);
+    }
+
+    public void LoginZeytoon(MouseEvent event) throws IOException {
+        MouseLoader(event, "LoginZeytoon.fxml", stage, scene);
+    }
+
+    ////////////////////////////////////////Admin Restaurants Pages
+    public void AdminCafe(MouseEvent event) throws IOException {
+        MouseLoader(event, "AdminCafe.fxml", stage, scene);
+    }
+
+    public void AdminFastFood(MouseEvent event) throws IOException {
+        MouseLoader(event, "AdminFastFood.fxml", stage, scene);
+    }
+
+    public void AdminPizza(MouseEvent event) throws IOException {
+        MouseLoader(event, "AdminPizza.fxml", stage, scene);
+    }
+
+    public void AdminSonnati(MouseEvent event) throws IOException {
+        MouseLoader(event, "AdminSonnati.fxml", stage, scene);
+    }
+
+    ////////////////////////////////////////Submits
     public void CreateAccountSubmit(ActionEvent e) throws IOException {
-//        Customer customer = new Customer(phoneNumber, username, password, email, age);
         try {
             username = Username.getText();
             email = Email.getText();
             phoneNumber = PhoneNumber.getText();
+            age = Integer.parseInt(Age.getText());
             password = Password.getText();
             confirmPassword = ConfirmPassword.getText();
-            age = Integer.parseInt(Age.getText());
-            customer.setUsername(username);
-            customer.setAge(age);
-            customer.setEmail(email);
-            customer.setPassword(password);
-            customer.setConfirmpassword(confirmPassword);
-            customer.setPhoneNumber(phoneNumber);
-            System.out.println("customer username : " + customer.getUsername());
-            System.out.println("customer password : " + customer.getPassword());
-//            costumer = new Applicant(phoneNumber , username , password , confirmPassword ,email ,age);
-            if (!AgeChecker(customer.getAge()))
-                ErrorLabel.setText("*You Should Be +18 to sign up");
-            if (!PasswordChecker(customer.getPassword(), customer.getConfirmpassword()))
-                ErrorLabel.setText("*ConfirmPass doesn't match Password");
-            if (!EmailChecker(customer.getEmail()))
-                ErrorLabel.setText("*Unvalid Email");
-            if (!PhoneNumberChecker(customer.getPhoneNumber()))
-                ErrorLabel.setText("*Plz Enter Valid Phonenumber");
+
+            if (!EmailChecker(email))
+                ErrorLabel.setText("*email don't exist*");
+            if (!PhoneNumberChecker(phoneNumber))
+                ErrorLabel.setText("*Plz enter valid phone number*");
+            if (!AgeChecker(age))
+                ErrorLabel.setText("*You should be +18 to sign up*");
+            if (!PasswordChecker(password, confirmPassword))
+                ErrorLabel.setText("*ConfirmPass doesn't match Password*");
+
         } catch (Exception ev) {
-            ErrorLabel.setText("*Plz Enter Valid Input");
+            ErrorLabel.setText("*Plz Enter a Valid Input*");
         }
-        if (UsernameChecker(customer.getUsername()) && EmailChecker(customer.getEmail()) && PhoneNumberChecker(customer.getPhoneNumber())
-                && AgeChecker(customer.getAge()) && PasswordChecker(customer.getPassword(), customer.getConfirmpassword()))
-            loader(e, "Login.fxml", stage, scene);
+
+        if (UsernameChecker(username) && EmailChecker(email) && PhoneNumberChecker(phoneNumber)
+                && AgeChecker(age) && PasswordChecker(password, confirmPassword)) {
+            try {
+                File outputFile = new File(CreateAccountFile);
+                PrintWriter writer = new PrintWriter(outputFile);
+                writer.write("Username: " + Username.getText());
+                writer.write(" Password: " + Password.getText());
+                writer.write(" Email: " + Email.getText());
+                writer.write(" PhoneNumber: " + PhoneNumber.getText());
+                writer.write(" Age: " + Integer.parseInt(Age.getText()));
+                writer.close();
+            } catch (java.io.IOException exception) {
+                System.out.println("Error writing to file: " + CreateAccountFile);
+            }
+            Loader(e, "Login.fxml", stage, scene, 350, 70);
+        }
     }
+
     public void LoginSubmit(ActionEvent e) throws IOException {
         try {
             loginUsername = LoginUsername.getText();
             loginPassword = LoginPassword.getText();
-            if (!LoginUsernameChecker(loginUsername, customer.getUsername()))
-                ErrorLabel.setText("*Plz enter a valid username");
-            if (!LoginPasswordChecker(loginPassword, customer.getPassword()) ) {
-                ErrorLabel.setText("*Plz enter a valid password");
-                System.out.println("customer password tu login : " + customer.getPassword());
-                System.out.println("customer username tu login : " + customer.getUsername());
-            }
+            if (!LoginChecker(loginUsername, loginPassword))
+                ErrorLabel.setText("*Plz Enter a Valid Username or Password*");
         } catch (Exception ev) {
-            ErrorLabel.setText("*Plz Enter Valid Input");
+            ErrorLabel.setText("*Plz Enter a Valid Input*");
         }
-        if (LoginUsernameChecker(loginUsername , customer.getUsername()) && LoginPasswordChecker(loginPassword, customer.getPassword()))
-            loader(e, "Login.fxml", stage, scene);
+        if (LoginChecker(loginUsername, loginPassword))
+            Loader(e, "LoginRestaurants.fxml", stage, scene, 260, 10);
     }
 
     public void AdminSubmit(ActionEvent e) throws IOException {
         try {
             adminUsername = AdminUsername.getText();
             adminPassword = AdminPassword.getText();
-            if (!AdminUsernameChecker(adminUsername)) {
-                ErrorLabel.setText("*Plz Enter a Valid Username");
-            }
-            if (!AdminPasswordChecker(adminPassword)) {
-                ErrorLabel.setText("*Plz Enter a Valid Password");
-            }
+
+            if (!AdminChecker(adminUsername, adminPassword))
+                ErrorLabel.setText("*Plz Enter a Valid Username*");
+
         } catch (Exception ev) {
-            ErrorLabel.setText("*Plz Enter a Valid Input");
+            ErrorLabel.setText("*Plz Enter a Valid Input*");
         }
-        if (AdminUsernameChecker(adminUsername) && AdminPasswordChecker(adminPassword)) {
-            loader(e, "Restaurants.fxml", stage, scene);
-        }
+
+        if (AdminChecker(adminUsername, adminPassword))
+            Loader(e, "AdminRestaurants.fxml", stage, scene, 260, 10);
     }
 
-    public void CreateAccount(ActionEvent e) throws IOException {
-        loader(e, "CreateAccount.fxml", stage, scene);
-    }
-
-    public void Login(ActionEvent e) throws IOException {
-        loader(e, "Login.fxml", stage, scene);
-    }
-
-    public void Admin(ActionEvent e) throws IOException {
-        loader(e, "Admin.fxml", stage, scene);
-    }
-
-    public void Restaurants(ActionEvent e) throws IOException {
-        loader(e, "Restaurants.fxml", stage, scene);
-    }
-
-    public void loader(ActionEvent e, String address, Stage stage, Scene scene) throws IOException {
-        Parent root;
+    ////////////////////////////////////////Handle Buttons
+    public void CafeHandleButton(ActionEvent event) throws IOException {
+        Button clickedButton = (Button) event.getSource();
+        String buttonId = clickedButton.getId();
         try {
-            root = FXMLLoader.load(Objects.requireNonNull(Controller.class.getResource(address)));
-            stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
-            scene = new Scene(root);
-            stage.setX(10);
-            stage.setY(10);
-            stage.setScene(scene);
-            stage.show();
-        } catch (Exception ev) {
-            System.out.println(ev);
+            BuyHandler(buttonId, KookooSabziCost, CashLabel);
+            BuyHandler(buttonId, KotletCost, CashLabel);
+            BuyHandler(buttonId, OmletCost, CashLabel);
+            BuyHandler(buttonId, SoosisCost, CashLabel);
+        } catch (Exception e) {
+            System.out.println(e);
         }
     }
 
-    public void mouseloader(MouseEvent mouseevent, String address, Stage stage, Scene scene) throws IOException {
-        Parent root;
+    public void FastFoodHandleButton(ActionEvent event) throws IOException {
+        Button clickedButton = (Button) event.getSource();
+        String buttonId = clickedButton.getId();
         try {
-            root = FXMLLoader.load(Objects.requireNonNull(Controller.class.getResource(address)));
-            stage = (Stage) ((Node) mouseevent.getSource()).getScene().getWindow();
-            scene = new Scene(root);
-            stage.setX(10);
-            stage.setY(10);
-            stage.setScene(scene);
-            stage.show();
-        } catch (Exception ev) {
-            System.out.println(ev);
+            BuyHandler(buttonId, BandariCost, CashLabel);
+            BuyHandler(buttonId, BurgerCost, CashLabel);
+            BuyHandler(buttonId, KentuckyCost, CashLabel);
+            BuyHandler(buttonId, SibZaminiCost, CashLabel);
+        } catch (Exception e) {
+            System.out.println(e);
         }
     }
 
-    public void Sonnati(MouseEvent event) throws IOException {
-        mouseloader(event, "Sonnati.fxml", stage, scene);
+    public void KababiHandleButton(ActionEvent event) throws IOException {
+        Button clickedButton = (Button) event.getSource();
+        String buttonId = clickedButton.getId();
+        try {
+            BuyHandler(buttonId, JigarCost, CashLabel);
+            BuyHandler(buttonId, JoojehCost, CashLabel);
+            BuyHandler(buttonId, KababCost, CashLabel);
+            BuyHandler(buttonId, ShishlikCost, CashLabel);
+        } catch (Exception e) {
+            System.out.println(e);
+        }
     }
 
-    public void Pizza(MouseEvent event) throws IOException {
-        mouseloader(event, "Pizza.fxml", stage, scene);
+    public void PizzaHandleButton(ActionEvent event) throws IOException {
+        Button clickedButton = (Button) event.getSource();
+        String buttonId = clickedButton.getId();
+        try {
+            BuyHandler(buttonId, ItalianCost, CashLabel);
+            BuyHandler(buttonId, MakhlootCost, CashLabel);
+            BuyHandler(buttonId, PeperoniCost, CashLabel);
+            BuyHandler(buttonId, SabzijatCost, CashLabel);
+        } catch (Exception e) {
+            System.out.println(e);
+        }
     }
 
-    public void Fastfood(MouseEvent event) throws IOException {
-        mouseloader(event, "Fastfood.fxml", stage, scene);
+    public void SonnatiHandleButton(ActionEvent event) throws IOException {
+        Button clickedButton = (Button) event.getSource();
+        String buttonId = clickedButton.getId();
+        try {
+            BuyHandler(buttonId, AshReshtehCost, CashLabel);
+            BuyHandler(buttonId, DiziCost, CashLabel);
+            BuyHandler(buttonId, KashkCost, CashLabel);
+            BuyHandler(buttonId, SholehCost, CashLabel);
+        } catch (Exception e) {
+            System.out.println(e);
+        }
     }
 
-    public void Sandwich(MouseEvent event) throws IOException {
-        mouseloader(event, "Sandwich.fxml", stage, scene);
+    public void ZeytoonHandleButton(ActionEvent event) throws IOException {
+        Button clickedButton = (Button) event.getSource();
+        String buttonId = clickedButton.getId();
+        try {
+            BuyHandler(buttonId, GheymehCost, CashLabel);
+            BuyHandler(buttonId, GhormehSabziCost, CashLabel);
+            BuyHandler(buttonId, MakaroniCost, CashLabel);
+            BuyHandler(buttonId, MorghCost, CashLabel);
+        } catch (Exception e) {
+            System.out.println(e);
+        }
     }
 
-    public void Cafe(MouseEvent event) throws IOException {
-        mouseloader(event, "Cafe.fxml", stage, scene);
+    ////////////////////////////////////////Portal Prices
+
+    public void MellatPrice(MouseEvent event) throws IOException {
+        MouseLoader(event, "MellatPortal.fxml", stage, scene);
     }
 
-    public void Akbarjuje(MouseEvent event) throws IOException {
-        mouseloader(event, "Akbarjuje.fxml", stage, scene);
+    public void SamanPrice(MouseEvent event) throws IOException {
+        MouseLoader(event, "SamanPortal.fxml", stage, scene);
     }
 
+    public void SepahPrice(MouseEvent event) throws IOException {
+        MouseLoader(event, "SepahPortal.fxml", stage, scene);
+    }
+
+    ////////////////////////////////////////User Profile
     public void UserDetails() {
-        RectAnimation.setX(0);
-        Name.setLayoutX(5);
-        Back.setLayoutX(5);
+        RectAnimation.setLayoutX(0);
+        Name.setLayoutX(20);
+        Back.setLayoutX(20);
         Charge.setLayoutX(230);
         CashLabel.setLayoutX(230);
     }
 
     public void Backto() {
-        RectAnimation.setX(-440);
+        RectAnimation.setLayoutX(-440);
         Name.setLayoutX(-420);
-        Charge.setLayoutX(-220);
         Back.setLayoutX(-420);
-        CashLabel.setLayoutX(-420);
+        Charge.setLayoutX(-210);
+        CashLabel.setLayoutX(-210);
+        RectAnimation2.setLayoutX(-440);
+        MellatLogo.setLayoutX(-420);
+        SamanLogo.setLayoutX(-280);
+        SepahLogo.setLayoutX(-140);
     }
 
-    public void ChargeAccount(ActionEvent e) throws IOException {
-        //Directiong to Bank Portal
-        Parent root = FXMLLoader.load(Objects.requireNonNull(ControllerPayment.class.getResource("bankPortal.fxml")));
-        stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
-        scene = new Scene(root);
-        stage.setX(10);
-        stage.setY(10);
-        stage.setScene(scene);
-        stage.show();
-        //Amount of Money That is Payable
+    public void Portals() {
+        RectAnimation2.setLayoutX(530);
+        MellatLogo.setLayoutX(550);
+        SamanLogo.setLayoutX(690);
+        SepahLogo.setLayoutX(830);
     }
 
-    //تابع خرید کردم و محسابه باقیمانده
+    ////////////////////////////////////////Buy
     private void Buy(TextField Food, Label CashLabel) {
         long remain;
         if (AccountChecker(CashLabel.getText(), Food.getText())) {
             remain = Integer.parseInt(CashLabel.getText()) - Integer.parseInt(Food.getText());
             CashLabel.setText(String.valueOf(remain));
-            System.out.println("Kharidammmm"); //// چرت
         } else {
             Alert accountalert = new Alert(Alert.AlertType.ERROR);
             accountalert.setTitle("Account Error !");
             accountalert.setHeaderText("Not Enough Cash to Buy");
-            accountalert.setContentText("Pease Charge Your Account");
-            if (accountalert.showAndWait().get() == ButtonType.OK) {
+            accountalert.setContentText("Please Charge Your Account");
+            if (accountalert.showAndWait().get() == ButtonType.OK)
                 accountalert.close();
-            }
         }
-    }
-
-    //چک میکنه که داری کدوم غذا رو خرید میکنی
-//    @FXML
-//    public void handleButtonClick(ActionEvent event) throws IOException {
-//        Button clickedButton = (Button) event.getSource();
-//        String buttonId = clickedButton.getId();
-//        System.out.println(buttonId + " Mikhay Bekhari ?");   // // چرت
-//        try {
-//            BuyHandler(buttonId, JujeCost, CashLabel);
-//            BuyHandler(buttonId, BargCost, CashLabel);
-//            BuyHandler(buttonId, SoltaniCost, CashLabel);
-//            BuyHandler(buttonId, BakhtiyariCost, CashLabel);
-//        } catch (Exception e) {
-//            System.out.println(e);   /// اگه ارور داد چاپ کن
-//        }
-//    }
-    @FXML
-    public void AkbarJujehandlebutton(ActionEvent event) throws IOException {
-        Button clickedButton = (Button) event.getSource();
-        String buttonId = clickedButton.getId();
-        System.out.println(buttonId + " Mikhay Bekhari ?");   // // چرت
-        try {
-            BuyHandler(buttonId, JujeCost, CashLabel);
-            BuyHandler(buttonId, BargCost, CashLabel);
-            BuyHandler(buttonId, SoltaniCost, CashLabel);
-            BuyHandler(buttonId, BakhtiyariCost, CashLabel);
-        } catch (Exception e) {
-            System.out.println(e);
-        }
-    }
-
-    @FXML
-    public void Cafehandlebutton(ActionEvent event) throws IOException {
-        Button clickedButton = (Button) event.getSource();
-        String buttonId = clickedButton.getId();
-        System.out.println(buttonId + " Mikhay Bekhari ?");   // // چرت
-        try {
-            BuyHandler(buttonId, SushiCost, CashLabel);
-            BuyHandler(buttonId, ShinselCost, CashLabel);
-            BuyHandler(buttonId, NotellaCost, CashLabel);
-            BuyHandler(buttonId, PastaCost, CashLabel);
-        } catch (Exception e) {
-            System.out.println(e);
-        }
-    }
-
-    @FXML
-    public void Fastfoodhandlebutton(ActionEvent event) throws IOException {
-        Button clickedButton = (Button) event.getSource();
-        String buttonId = clickedButton.getId();
-        System.out.println(buttonId + " Mikhay Bekhari ?");   // // چرت
-        try {
-            BuyHandler(buttonId, MorghCost, CashLabel);
-            BuyHandler(buttonId, GharchCost, CashLabel);
-            BuyHandler(buttonId, SibZaminiCost, CashLabel);
-            BuyHandler(buttonId, KentakiCost, CashLabel);
-        } catch (Exception e) {
-            System.out.println(e);
-        }
-    }
-
-    @FXML
-    public void Pizzahandlebutton(ActionEvent event) throws IOException {
-        Button clickedButton = (Button) event.getSource();
-        String buttonId = clickedButton.getId();
-        System.out.println(buttonId + " Mikhay Bekhari ?");   // // چرت
-        try {
-            BuyHandler(buttonId, MakhlutCost, CashLabel);
-            BuyHandler(buttonId, PeperoniCost, CashLabel);
-            BuyHandler(buttonId, GushtoGharchCost, CashLabel);
-            BuyHandler(buttonId, RoastBeafCost, CashLabel);
-        } catch (Exception e) {
-            System.out.println(e);
-        }
-    }
-
-    @FXML
-    public void Sandwichhandlebutton(ActionEvent event) throws IOException {
-        Button clickedButton = (Button) event.getSource();
-        String buttonId = clickedButton.getId();
-        System.out.println(buttonId + " Mikhay Bekhari ?");   // // چرت
-        try {
-            BuyHandler(buttonId, HamburgerCost, CashLabel);
-            BuyHandler(buttonId, KhurakCost, CashLabel);
-            BuyHandler(buttonId, DoubleburgerCost, CashLabel);
-            BuyHandler(buttonId, FalafelCost, CashLabel);
-        } catch (Exception e) {
-            System.out.println(e);
-        }
-    }
-
-    @FXML
-    public void Sonnatihandlebutton(ActionEvent event) throws IOException {
-        Button clickedButton = (Button) event.getSource();
-        String buttonId = clickedButton.getId();
-        System.out.println(buttonId + " Mikhay Bekhari ?");   // // چرت
-        try {
-            BuyHandler(buttonId, DiziahaniCost, CashLabel);
-            BuyHandler(buttonId, DizimessiCost, CashLabel);
-            BuyHandler(buttonId, DizisangiCost, CashLabel);
-            BuyHandler(buttonId, AbgushtCost, CashLabel);
-        } catch (Exception e) {
-            System.out.println(e);
-        }
-    }
-
-    // چک میکنه ببینه حسابت موجودی داره که خرید کنی یا نه
-    private Boolean AccountChecker(String Cash, String Cost) {
-        if (Integer.parseInt(Cash) >= Integer.parseInt(Cost))
-            return true;
-        return false;
     }
 
     private void BuyHandler(String buttonId, TextField Food, Label CashLabel) {
         if (Objects.equals(buttonId.concat("Cost"), Food.getId()))
             Buy(Food, CashLabel);
     }
-    //The Logout
-//    public void logout(ActionEvent event) {
-//        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
-//        alert.setTitle("Logout");
-//        alert.setHeaderText("You 're about to logout");
-//        alert.setContentText("Do you want to save before exiting ?:");
-//
-//        if (alert.showAndWait().get() == ButtonType.OK) {
-//            stage = (Stage) scenePane.getScene().getWindow();
-//            stage.close();
-//        }
-//    }
-
 }

@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="1500.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.blinkfood.Controller">
+   <children>
+      <ImageView fitHeight="750.0" fitWidth="1500.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/Restaurants/Cafe.jpg" />
+         </image>
+      </ImageView>
+      <Button layoutX="20.0" layoutY="30.0" mnemonicParsing="false" onAction="#LoginRestaurants" opacity="0.0" prefHeight="40.0" prefWidth="50.0" text="Button" />
+      <ImageView fitHeight="242.0" fitWidth="346.0" layoutX="97.0" layoutY="51.0" pickOnBounds="true" smooth="false">
+         <image>
+            <Image url="@../image/Foods/Cafe/KookooSabzi.jpg" />
+         </image></ImageView>
+      <TextField alignment="CENTER" layoutX="97.0" layoutY="297.0" opacity="0.3" prefHeight="50.0" prefWidth="170.0" text="Kookoo Sabzi">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="KookooSabziCost" alignment="CENTER" layoutX="270.0" layoutY="297.0" opacity="0.3" prefHeight="50.0" prefWidth="84.0" text="230000">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextField>
+      <Button fx:id="KookooSabzi" layoutX="356.0" layoutY="297.0" mnemonicParsing="false" onAction="#CafeHandleButton" opacity="0.5" prefHeight="30.0" prefWidth="87.0" style="-fx-background-color: #000000;" text="Buy" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Button>
+      <ImageView fitHeight="242.0" fitWidth="346.0" layoutX="543.0" layoutY="51.0" pickOnBounds="true" smooth="false">
+         <image>
+            <Image url="@../image/Foods/Cafe/Kotlet.jpg" />
+         </image></ImageView>
+      <TextField alignment="CENTER" layoutX="543.0" layoutY="297.0" opacity="0.3" prefHeight="50.0" prefWidth="170.0" text="Kotlet">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="KotletCost" alignment="CENTER" layoutX="715.0" layoutY="297.0" opacity="0.3" prefHeight="50.0" prefWidth="84.0" text="340000">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextField>
+      <Button fx:id="Kotlet" layoutX="802.0" layoutY="297.0" mnemonicParsing="false" onAction="#CafeHandleButton" opacity="0.5" prefHeight="30.0" prefWidth="87.0" style="-fx-background-color: #000000;" text="Buy" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Button>
+      <ImageView fitHeight="242.0" fitWidth="346.0" layoutX="97.0" layoutY="390.0" pickOnBounds="true" smooth="false">
+         <image>
+            <Image url="@../image/Foods/Cafe/Omlet.jpg" />
+         </image></ImageView>
+      <TextField alignment="CENTER" layoutX="97.0" layoutY="635.0" opacity="0.3" prefHeight="50.0" prefWidth="170.0" text="Omlet">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="OmletCost" alignment="CENTER" layoutX="270.0" layoutY="635.0" opacity="0.3" prefHeight="50.0" prefWidth="84.0" text="450000">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextField>
+      <Button fx:id="Omlet" layoutX="356.0" layoutY="635.0" mnemonicParsing="false" onAction="#CafeHandleButton" opacity="0.5" prefHeight="30.0" prefWidth="87.0" style="-fx-background-color: #000000;" text="Buy" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Button>
+      <ImageView fitHeight="242.0" fitWidth="346.0" layoutX="543.0" layoutY="390.0" pickOnBounds="true" smooth="false">
+         <image>
+            <Image url="@../image/Foods/Cafe/Soosis.jpg" />
+         </image></ImageView>
+      <TextField alignment="CENTER" layoutX="543.0" layoutY="635.0" opacity="0.3" prefHeight="50.0" prefWidth="170.0" text="Soosis">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="SoosisCost" alignment="CENTER" layoutX="715.0" layoutY="635.0" opacity="0.3" prefHeight="50.0" prefWidth="84.0" text="480000">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextField>
+      <Button fx:id="Soosis" layoutX="802.0" layoutY="635.0" mnemonicParsing="false" onAction="#CafeHandleButton" opacity="0.5" prefHeight="30.0" prefWidth="87.0" style="-fx-background-color: #000000;" text="Buy" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Button>
+      <ImageView fitHeight="296.0" fitWidth="396.0" layoutX="1050.0" layoutY="51.0" pickOnBounds="true" smooth="false">
+         <image>
+            <Image url="@../image/Foods/Cafe.jpg" />
+         </image>
+      </ImageView>
+      <TextField editable="false" layoutX="1050.0" layoutY="450.0" prefHeight="80.0" prefWidth="396.0" style="-fx-background-color: #0000BB;" text="Works 12AM to 12PM ">
+         <font>
+            <Font size="24.0" />
+         </font>
+         <effect>
+            <InnerShadow height="20.0" radius="9.5" width="20.0" />
+         </effect>
+      </TextField>
+      <TextField editable="false" layoutX="1050.0" layoutY="550.0" prefHeight="80.0" prefWidth="396.0" style="-fx-background-color: #0000bb;" text="get out : 5 Bike Delivery Available">
+         <font>
+            <Font size="24.0" />
+         </font>
+         <effect>
+            <InnerShadow height="20.0" radius="9.5" width="20.0" />
+         </effect>
+      </TextField>
+      <TextField editable="false" layoutX="1050.0" layoutY="650.0" prefHeight="80.0" prefWidth="396.0" style="-fx-background-color: #0000BB;" text="5th Baharestan ST . Num 34">
+         <font>
+            <Font size="24.0" />
+         </font>
+         <effect>
+            <InnerShadow height="20.0" radius="9.5" width="20.0" />
+         </effect>
+      </TextField>
+      <ImageView fx:id="UserProfile" fitHeight="70.0" fitWidth="70.0" layoutY="680.0" onMouseClicked="#UserDetails" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/Userprofile.jpg" />
+         </image>
+      </ImageView>
+      <Rectangle fx:id="RectAnimation" fill="#0000bb" height="200.0" layoutX="-440.0" layoutY="550.0" stroke="BLACK" strokeType="INSIDE" width="440.0">
+         <effect>
+            <InnerShadow height="20.0" radius="9.5" width="20.0" />
+         </effect>
+      </Rectangle>
+      <Label fx:id="Name" alignment="CENTER" layoutX="-420.0" layoutY="570.0" prefHeight="70.0" prefWidth="190.0" text="User" textFill="WHITE">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <Label fx:id="CashLabel" alignment="CENTER" layoutX="-210.0" layoutY="570.0" prefHeight="70.0" prefWidth="190.0" text="2500000" textFill="WHITE">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <Button fx:id="Back" alignment="CENTER" layoutX="-420.0" layoutY="650.0" mnemonicParsing="false" onAction="#Backto" prefHeight="70.0" prefWidth="190.0" style="-fx-background-color: #1e1e1e;" text="Back" textFill="WHITE">
+         <font>
+            <Font size="36.0" />
+         </font>
+         <effect>
+            <InnerShadow />
+         </effect>
+      </Button>
+      <Button fx:id="Charge" alignment="CENTER" layoutX="-210.0" layoutY="650.0" mnemonicParsing="false" onAction="#Portals" prefHeight="70.0" prefWidth="190.0" style="-fx-background-color: #1e1e1e;" text="Charge" textFill="WHITE">
+         <effect>
+            <InnerShadow />
+         </effect>
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Button>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="1050.0" layoutY="366.0" prefHeight="70.0" prefWidth="396.0" text="Cafe Restaurant" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="Century" size="40.0" />
+         </font>
+      </Label>
+      <Rectangle fx:id="RectAnimation2" fill="#0000bb" height="300.0" layoutX="-440.0" layoutY="225.0" stroke="BLACK" strokeType="INSIDE" width="440.0">
+         <effect>
+            <InnerShadow height="20.0" radius="9.5" width="20.0" />
+         </effect>
+      </Rectangle>
+      <TextField fx:id="Price" layoutX="-420.0" layoutY="245.0" prefHeight="60.0" prefWidth="400.0" promptText="Enter Price to Charge">
+         <font>
+            <Font name="Cambria" size="30.0" />
+         </font>
+         <effect>
+            <InnerShadow />
+         </effect>
+      </TextField>
+      <Label fx:id="ChoosePortal" alignment="CENTER" layoutX="-420.0" layoutY="325.0" prefHeight="40.0" prefWidth="400.0" text="*Plz Choose Portal" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="Cambria" size="30.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="MellatLogo" fitHeight="120.0" fitWidth="120.0" layoutX="-420.0" layoutY="385.0" onMouseClicked="#MellatPrice" pickOnBounds="true" smooth="false">
+         <image>
+            <Image url="@../image/Dargah/MellatLogo.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="SamanLogo" fitHeight="120.0" fitWidth="120.0" layoutX="-280.0" layoutY="385.0" onMouseClicked="#SamanPrice" pickOnBounds="true" smooth="false">
+         <image>
+            <Image url="@../image/Dargah/SamanLogo.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="SepahLogo" fitHeight="120.0" fitWidth="120.0" layoutX="-140.0" layoutY="385.0" onMouseClicked="#SepahPrice" pickOnBounds="true" smooth="false">
+         <image>
+            <Image url="@../image/Dargah/SepahLogo.png" />
+         </image>
+      </ImageView>
+   </children>
+</Pane>

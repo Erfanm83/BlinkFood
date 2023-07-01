@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.Pane?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.blinkfood.Controller">
+    <children>
+        <ImageView fitHeight="750.0" fitWidth="1500.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../image/AdminRestaurants.jpg" />
+            </image>
+        </ImageView>
+        <Button layoutX="20.0" layoutY="30.0" mnemonicParsing="false" onAction="#Admin" opacity="0.0" prefHeight="40.0" prefWidth="50.0" />
+        <ImageView fitHeight="200.0" fitWidth="356.0" layoutX="150.0" layoutY="77.0" onMouseClicked="#AdminCafe" pickOnBounds="true" smooth="false">
+            <image>
+                <Image url="@../image/Foods/Cafe.jpg" />
+            </image>
+        </ImageView>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="150.0" layoutY="294.0" prefHeight="50.0" prefWidth="356.0" text="Cafe Restaurants" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="Cambria" size="36.0" />
+         </font>
+      </Label>
+        <ImageView fitHeight="200.0" fitWidth="352.0" layoutX="599.0" layoutY="77.0" onMouseClicked="#AdminFastFood" pickOnBounds="true" smooth="false">
+            <image>
+                <Image url="@../image/Foods/FastFood.jpg" />
+            </image>
+        </ImageView>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="597.0" layoutY="294.0" prefHeight="50.0" prefWidth="356.0" text="Fast Food" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="Cambria" size="36.0" />
+         </font>
+      </Label>
+        <ImageView fitHeight="197.0" fitWidth="356.0" layoutX="150.0" layoutY="426.0" onMouseClicked="#AdminPizza" pickOnBounds="true" smooth="false">
+            <image>
+                <Image url="@../image/Foods/Pizza.jpg" />
+            </image>
+        </ImageView>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="150.0" layoutY="637.0" prefHeight="50.0" prefWidth="356.0" text="Pizza" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="Cambria" size="36.0" />
+         </font>
+      </Label>
+        <ImageView fitHeight="197.0" fitWidth="352.0" layoutX="599.0" layoutY="426.0" onMouseClicked="#AdminSonnati" pickOnBounds="true">
+            <image>
+                <Image url="@../image/Foods/Sonnati.jpg" />
+            </image>
+        </ImageView>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="597.0" layoutY="637.0" prefHeight="50.0" prefWidth="356.0" text="Iranian" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="Cambria" size="36.0" />
+         </font>
+      </Label>
+    </children>
+</Pane>

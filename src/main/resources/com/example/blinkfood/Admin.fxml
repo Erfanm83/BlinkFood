@@ -30,10 +30,10 @@
            </font>
        </PasswordField>
        <Button fx:id="Submit" layoutX="480.0" layoutY="393.0" mnemonicParsing="false" onAction="#AdminSubmit" opacity="0.0" prefHeight="42.0" prefWidth="82.0" text="Submit" />
-       <Button layoutX="455.0" layoutY="505.0" mnemonicParsing="false" onAction="#Admin" opacity="0.0" prefHeight="50.0" prefWidth="50.0" text="Server" />
-       <Button layoutX="540.0" layoutY="505.0" mnemonicParsing="false" onAction="#Login" opacity="0.0" prefHeight="50.0" prefWidth="50.0" text="User" />
+       <Button layoutX="455.0" layoutY="505.0" mnemonicParsing="false" onAction="#Admin" opacity="0.0" prefHeight="50.0" prefWidth="50.0" text="Admin" />
+       <Button layoutX="540.0" layoutY="505.0" mnemonicParsing="false" onAction="#Login" opacity="0.0" prefHeight="50.0" prefWidth="50.0" text="Login" />
        <Line fx:id="line" endX="45.0" layoutX="457.0" layoutY="565.0" stroke="WHITE" strokeWidth="5.0" />
-      <Label fx:id="ErrorLabel" layoutX="301.0" layoutY="458.0" prefHeight="31.0" prefWidth="470.0" textAlignment="CENTER" textFill="#323232">
+      <Label fx:id="ErrorLabel" layoutX="290.0" layoutY="457.0" prefHeight="31.0" prefWidth="470.0" textAlignment="CENTER">
          <font>
             <Font name="Consolas" size="23.0" />
          </font>
