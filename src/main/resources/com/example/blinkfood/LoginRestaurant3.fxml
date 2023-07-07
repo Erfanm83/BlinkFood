@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="1500.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.blinkfood.Login3Controller">
+   <children>
+      <ImageView fitHeight="750.0" fitWidth="1500.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/Restaurants/Pizza.jpg" />
+         </image>
+      </ImageView>
+      <Button layoutX="20.0" layoutY="30.0" mnemonicParsing="false" onAction="#LoginRestaurants" opacity="0.0" prefHeight="40.0" prefWidth="50.0" text="Button" />
+      <Pane fx:id="Food11" layoutX="97.0" layoutY="51.0" prefHeight="296.0" prefWidth="346.0">
+         <children>
+            <ImageView fx:id="FoodImage31" fitHeight="242.0" fitWidth="346.0" pickOnBounds="true" smooth="false" />
+            <TextField fx:id="FoodName31" alignment="CENTER" editable="false" layoutY="246.0" opacity="0.3" prefHeight="50.0" prefWidth="170.0">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="FoodPrice31" alignment="CENTER" editable="false" layoutX="173.0" layoutY="246.0" opacity="0.3" prefHeight="50.0" prefWidth="84.0">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </TextField>
+            <Button layoutX="259.0" layoutY="246.0" mnemonicParsing="false" opacity="0.5" prefHeight="50.0" prefWidth="87.0" style="-fx-background-color: #000000;" text="Buy" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+      <Pane fx:id="Food12" layoutX="543.0" layoutY="51.0" prefHeight="296.0" prefWidth="346.0">
+         <children>
+            <ImageView fx:id="FoodImage32" fitHeight="242.0" fitWidth="346.0" pickOnBounds="true" smooth="false" />
+            <TextField fx:id="FoodName32" alignment="CENTER" editable="false" layoutY="246.0" opacity="0.3" prefHeight="50.0" prefWidth="170.0">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="FoodPrice32" alignment="CENTER" editable="false" layoutX="173.0" layoutY="246.0" opacity="0.3" prefHeight="50.0" prefWidth="84.0">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </TextField>
+            <Button layoutX="259.0" layoutY="246.0" mnemonicParsing="false" opacity="0.5" prefHeight="50.0" prefWidth="87.0" style="-fx-background-color: #000000;" text="Buy" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+      <Pane fx:id="Food13" layoutX="97.0" layoutY="390.0" prefHeight="296.0" prefWidth="346.0">
+         <children>
+            <ImageView fx:id="FoodImage33" fitHeight="242.0" fitWidth="346.0" pickOnBounds="true" smooth="false" />
+            <TextField fx:id="FoodName33" alignment="CENTER" editable="false" layoutY="246.0" opacity="0.3" prefHeight="50.0" prefWidth="170.0">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="FoodPrice33" alignment="CENTER" editable="false" layoutX="173.0" layoutY="246.0" opacity="0.3" prefHeight="50.0" prefWidth="84.0">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </TextField>
+            <Button layoutX="259.0" layoutY="246.0" mnemonicParsing="false" opacity="0.5" prefHeight="50.0" prefWidth="87.0" style="-fx-background-color: #000000;" text="Buy" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+      <Pane fx:id="Food14" layoutX="543.0" layoutY="390.0" prefHeight="296.0" prefWidth="346.0">
+         <children>
+            <ImageView fx:id="FoodImage34" fitHeight="242.0" fitWidth="346.0" pickOnBounds="true" smooth="false" />
+            <TextField fx:id="FoodName34" alignment="CENTER" editable="false" layoutY="246.0" opacity="0.3" prefHeight="50.0" prefWidth="170.0">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="FoodPrice34" alignment="CENTER" editable="false" layoutX="173.0" layoutY="246.0" opacity="0.3" prefHeight="50.0" prefWidth="84.0">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </TextField>
+            <Button layoutX="259.0" layoutY="246.0" mnemonicParsing="false" opacity="0.5" prefHeight="50.0" prefWidth="87.0" style="-fx-background-color: #000000;" text="Buy" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+      <ImageView fitHeight="80.0" fitWidth="80.0" layoutY="670.0" onMouseClicked="#UserDetails" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Image/Userprofile.png" />
+         </image>
+      </ImageView>
+      <Pane fx:id="UserDetails" disable="true" layoutY="540.0" prefHeight="210.0" prefWidth="440.0" visible="false">
+         <children>
+            <Rectangle fx:id="RectAnimation" fill="#dddd00" height="210.0" stroke="BLACK" strokeType="INSIDE" width="440.0">
+               <effect>
+                  <InnerShadow height="20.0" radius="9.5" width="20.0" />
+               </effect>
+            </Rectangle>
+            <Label fx:id="Name" alignment="CENTER" layoutX="30.0" layoutY="30.0" prefHeight="60.0" prefWidth="175.0" text="Saeed">
+               <font>
+                  <Font name="Cambria" size="35.0" />
+               </font>
+            </Label>
+            <Label fx:id="CashLabel" alignment="CENTER" layoutX="235.0" layoutY="30.0" prefHeight="60.0" prefWidth="175.0" text="2500000">
+               <font>
+                  <Font name="Cambria" size="35.0" />
+               </font>
+            </Label>
+            <Button fx:id="Back" alignment="CENTER" layoutX="30.0" layoutY="120.0" mnemonicParsing="false" onAction="#Back" prefHeight="60.0" prefWidth="175.0" style="-fx-background-color: #1e1e1e;" text="Back" textFill="WHITE">
+               <font>
+                  <Font name="Cambria" size="31.0" />
+               </font>
+               <effect>
+                  <InnerShadow />
+               </effect>
+            </Button>
+            <Button fx:id="Charge" alignment="CENTER" layoutX="235.0" layoutY="120.0" mnemonicParsing="false" onAction="#Portals" prefHeight="60.0" prefWidth="175.0" style="-fx-background-color: #1e1e1e;" text="Charge" textFill="WHITE">
+               <effect>
+                  <InnerShadow />
+               </effect>
+               <font>
+                  <Font name="Cambria" size="31.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+      <Pane fx:id="Portals" disable="true" layoutX="530.0" layoutY="225.0" prefHeight="300.0" prefWidth="440.0" visible="false">
+         <children>
+            <Rectangle fx:id="RectAnimation2" fill="#dddd00" height="300.0" stroke="BLACK" strokeType="INSIDE" width="440.0">
+               <effect>
+                  <InnerShadow height="20.0" radius="9.5" width="20.0" />
+               </effect>
+            </Rectangle>
+            <TextField fx:id="Price" layoutX="20.0" layoutY="20.0" prefHeight="60.0" prefWidth="400.0" promptText="Enter Price to Charge">
+               <font>
+                  <Font name="Cambria" size="30.0" />
+               </font>
+               <effect>
+                  <InnerShadow />
+               </effect>
+            </TextField>
+            <Label fx:id="ChoosePortal" alignment="CENTER" layoutX="20.0" layoutY="100.0" prefHeight="40.0" prefWidth="400.0" text="*Plz Choose a Portal" textAlignment="CENTER">
+               <font>
+                  <Font name="Cambria" size="30.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="120.0" fitWidth="120.0" layoutX="160.0" layoutY="160.0" onMouseClicked="#MelliPrice" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/Portals/MelliLogo.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="120.0" fitWidth="120.0" layoutX="20.0" layoutY="160.0" onMouseClicked="#MellatPrice" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/Portals/MellatLogo.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="120.0" fitWidth="120.0" layoutX="300.0" layoutY="160.0" onMouseClicked="#SamanPrice" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/Portals/SamanLogo.jpg" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane layoutX="1050.0" layoutY="51.0" prefHeight="699.0" prefWidth="396.0">
+         <children>
+            <ImageView fitHeight="296.0" fitWidth="396.0" pickOnBounds="true" smooth="false" />
+            <TextField alignment="CENTER" layoutX="11.0" layoutY="326.0" prefHeight="70.0" prefWidth="375.0" promptText="Restaurant Name" styleClass="restaurantstextcolor3" stylesheets="@Style.css">
+               <font>
+                  <Font name="Cambria" size="36.0" />
+               </font>
+            </TextField>
+            <Label layoutX="20.0" layoutY="400.0" prefHeight="53.0" prefWidth="355.0" text="Opens from :             AM to             PM" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Spinner fx:id="StartWorkHours" editable="true" layoutX="143.0" layoutY="414.0" prefHeight="25.0" prefWidth="50.0" style="-fx-background-color: #0000bb;" />
+            <Spinner fx:id="EndWorkHours" editable="true" layoutX="272.0" layoutY="414.0" prefHeight="25.0" prefWidth="50.0" style="-fx-background-color: #0000bb;" />
+            <RadioButton fx:id="GetOut" layoutX="38.0" layoutY="468.0" mnemonicParsing="false" text="GetOut" textFill="WHITE">
+               <font>
+                  <Font name="Cambria" size="18.0" />
+               </font>
+               <toggleGroup>
+                  <ToggleGroup fx:id="Kind" />
+               </toggleGroup>
+               <effect>
+                  <Blend />
+               </effect>
+            </RadioButton>
+            <RadioButton fx:id="Lodge" layoutX="37.0" layoutY="505.0" mnemonicParsing="false" text="Lodge" textFill="WHITE">
+               <toggleGroup>
+                  <ToggleGroup fx:id="Kind" />
+               </toggleGroup>
+               <font>
+                  <Font name="Cambria" size="18.0" />
+               </font>
+               <effect>
+                  <Blend />
+               </effect>
+            </RadioButton>
+            <Spinner fx:id="services" layoutX="153.0" layoutY="478.0" prefHeight="40.0" prefWidth="71.0" style="-fx-background-color: #0000bb;" />
+            <TextField layoutX="9.0" layoutY="540.0" prefHeight="78.0" prefWidth="375.0" promptText="Restaurant Address" styleClass="restaurantstextcolor3" stylesheets="@Style.css">
+               <font>
+                  <Font name="Cambria" size="19.0" />
+               </font>
+            </TextField>
+            <Label fx:id="Services" layoutX="260.0" layoutY="460.0" prefHeight="70.0" prefWidth="104.0" textFill="WHITE">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+</Pane>

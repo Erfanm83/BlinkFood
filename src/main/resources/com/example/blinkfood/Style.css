@@ -1,0 +1,44 @@
+.restaurantstextcolor{
+    -fx-font-family: Cambria;
+    -fx-font-size: 36px;
+    -fx-text-fill: #000000;
+    -fx-background-color : #262fa4;
+    -fx-background-radius : 25;
+}
+.restaurantstextcolor2{
+    -fx-font-family: Cambria;
+    -fx-font-size: 36px;
+    -fx-text-fill: #000000;
+    -fx-background-color : #bb0000;
+    -fx-background-radius : 25;
+}
+.restaurantstextcolor3{
+    -fx-font-family: Cambria;
+    -fx-font-size: 36px;
+    -fx-text-fill: #000000;
+    -fx-background-color : #dddd00;
+    -fx-background-radius : 25;
+}
+.restaurantstextcolor4{
+    -fx-font-family: Cambria;
+    -fx-font-size: 36px;
+    -fx-text-fill: #000000;
+    -fx-background-color : #00bb00;
+    -fx-background-radius : 25;
+}
+.submitButton1:hover{
+    -fx-background-color: #1d5ed8;
+    -fx-text-fill: #ffffff;
+}
+.submitButton2:hover{
+    -fx-background-color: #980515;
+    -fx-text-fill: #ffffff;
+}
+.submitButton3:hover{
+    -fx-background-color: #e9dc01;
+    -fx-text-fill: #ffffff;
+}
+.submitButton4:hover{
+    -fx-background-color: #187232;
+    -fx-text-fill: #ffffff;
+}

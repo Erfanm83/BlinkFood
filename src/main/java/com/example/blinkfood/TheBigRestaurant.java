@@ -1,10 +1,25 @@
 package com.example.blinkfood;
 
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.scene.control.Button;
+import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.Pane;
+import javafx.stage.FileChooser;
+import javafx.stage.Stage;
 
+import java.io.File;
+import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 
 public abstract class TheBigRestaurant {
+
+    //نوع رستوران
+    String RestaurantKind;
 
     // غیرفعال بودن یا نبودن
     private boolean Available;
@@ -15,14 +30,12 @@ public abstract class TheBigRestaurant {
     //لیست غذا ها
     private ArrayList<String> FoodList;
     //آدرس
-     private String address;
+    private String address;
     // ساعت کاری
     private int StartWorkHours;
     private int EndWorkHours;
     // عکس رستوران
     private Image RestaurantImage;
-    //نوع رستوران
-    public String RestaurantKind;
     //تعداد پیک
     private int DeliveryNumbers;
     //لژ خانوادگی
@@ -31,20 +44,19 @@ public abstract class TheBigRestaurant {
     private int number;
 
     //constructors
-    public TheBigRestaurant(String name, ArrayList<String> foodList, int startWorkHours, int endWorkHours, Image restaurantImage , String restaurantkind) {
+    public TheBigRestaurant(String name, ArrayList<String> foodList, int startWorkHours, int endWorkHours, Image restaurantImage) {
         this.Name = name;
         this.FoodList = foodList;
         this.StartWorkHours = startWorkHours;
         this.EndWorkHours = endWorkHours;
         this.RestaurantImage = restaurantImage;
-        this.RestaurantKind = restaurantkind;
     }
 
     public TheBigRestaurant(int number) {
         this.number = number;
     }
 
-    public TheBigRestaurant(boolean available , boolean visible) {
+    public TheBigRestaurant(boolean available, boolean visible) {
         Available = available;
         Visible = visible;
     }
@@ -121,4 +133,6 @@ public abstract class TheBigRestaurant {
     public void setAddress(String address) {
         this.address = address;
     }
+
+
 }

@@ -11,8 +11,8 @@ public class GetOut extends TheBigRestaurant {
     private boolean Available;
     private boolean Visible;
 
-    public GetOut(String name, ArrayList<String> foodList, int startWorkHours, int endWorkHours, Image restaurantImage, String restaurantkind) {
-        super(name, foodList, startWorkHours, endWorkHours, restaurantImage, restaurantkind);
+    public GetOut(String name, ArrayList<String> foodList, int startWorkHours, int endWorkHours, Image restaurantImage) {
+        super(name, foodList, startWorkHours, endWorkHours, restaurantImage);
         RestaurantKind = "GetOut";
     }
 

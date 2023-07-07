@@ -11,8 +11,8 @@ public class Lodge extends TheBigRestaurant {
     private int TableNumbers;
     private boolean Available;
     private boolean Visible;
-    public Lodge(String name, ArrayList<String> foodList, int startWorkHours, int endWorkHours, Image restaurantImage, String restaurantkind) {
-        super(name, foodList, startWorkHours, endWorkHours, restaurantImage, restaurantkind);
+    public Lodge(String name, ArrayList<String> foodList, int startWorkHours, int endWorkHours, Image restaurantImage) {
+        super(name, foodList, startWorkHours, endWorkHours, restaurantImage);
         RestaurantKind = "FamilyLodge";
     }
 

@@ -1,0 +1,1 @@
+FoodName11: fcweew FoodName12: wecew FoodName13: ecew FoodName14: ewce FoodPrice11: 23000 FoodPrice12: 50000 FoodPrice13: 43000 FoodPrice14: 2333 RestaurantName: ShaeedAsegh RestaurantKind: Lodge StartWorkHours: 1 EndWorkHours: 12 NumberofServices: 12 RestaurantAddress: B14

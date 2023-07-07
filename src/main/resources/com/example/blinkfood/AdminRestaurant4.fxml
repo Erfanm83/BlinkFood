@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="1500.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.blinkfood.Restaurant4Controller">
+   <children>
+      <ImageView fitHeight="750.0" fitWidth="1500.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/Restaurants/Sonnati.jpg" />
+         </image>
+      </ImageView>
+      <Button layoutX="20.0" layoutY="30.0" mnemonicParsing="false" onAction="#AdminRestaurants" opacity="0.0" prefHeight="40.0" prefWidth="50.0" text="Button" />
+      <Pane fx:id="Food41" disable="true" layoutX="97.0" layoutY="51.0" prefHeight="296.0" prefWidth="346.0" visible="false">
+         <children>
+            <ImageView fx:id="FoodImage41" fitHeight="242.0" fitWidth="346.0" pickOnBounds="true" smooth="false">
+               <image>
+                  <Image url="@../image/UploadImage4.png" />
+               </image></ImageView>
+            <TextField fx:id="FoodName41" alignment="CENTER" layoutY="246.0" opacity="0.3" prefHeight="50.0" prefWidth="170.0">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="FoodPrice41" alignment="CENTER" layoutX="173.0" layoutY="246.0" opacity="0.3" prefHeight="50.0" prefWidth="84.0">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </TextField>
+            <Button fx:id="FoodDelete41" layoutX="259.0" layoutY="246.0" mnemonicParsing="false" onAction="#DeleteFood41" opacity="0.5" prefHeight="50.0" prefWidth="87.0" style="-fx-background-color: #000000;" text="Delete" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+      <Button fx:id="FoodCreate41" layoutX="356.0" layoutY="297.0" mnemonicParsing="false" onAction="#CreateFood41" opacity="0.5" prefHeight="50.0" prefWidth="87.0" style="-fx-background-color: #000000;" text="Create" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Button>
+      <Pane fx:id="Food42" disable="true" layoutX="540.0" layoutY="51.0" prefHeight="296.0" prefWidth="346.0" visible="false">
+         <children>
+            <ImageView fx:id="FoodImage42" fitHeight="242.0" fitWidth="346.0" pickOnBounds="true" smooth="false">
+               <image>
+                  <Image url="@../image/UploadImage4.png" />
+               </image></ImageView>
+            <TextField fx:id="FoodName42" alignment="CENTER" layoutY="246.0" opacity="0.3" prefHeight="50.0" prefWidth="170.0">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="FoodPrice42" alignment="CENTER" layoutX="173.0" layoutY="246.0" opacity="0.3" prefHeight="50.0" prefWidth="84.0">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </TextField>
+            <Button fx:id="FoodDelete42" layoutX="259.0" layoutY="246.0" mnemonicParsing="false" onAction="#DeleteFood42" opacity="0.5" prefHeight="50.0" prefWidth="87.0" style="-fx-background-color: #000000;" text="Delete" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+      <Button fx:id="FoodCreate42" layoutX="802.0" layoutY="297.0" mnemonicParsing="false" onAction="#CreateFood42" opacity="0.5" prefHeight="50.0" prefWidth="87.0" style="-fx-background-color: #000000;" text="Create" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Button>
+      <Pane fx:id="Food43" disable="true" layoutX="97.0" layoutY="390.0" prefHeight="296.0" prefWidth="346.0" visible="false">
+         <children>
+            <ImageView fx:id="FoodImage43" fitHeight="242.0" fitWidth="346.0" pickOnBounds="true" smooth="false">
+               <image>
+                  <Image url="@../image/UploadImage4.png" />
+               </image></ImageView>
+            <TextField fx:id="FoodName43" alignment="CENTER" layoutY="246.0" opacity="0.3" prefHeight="50.0" prefWidth="170.0">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="FoodPrice43" alignment="CENTER" layoutX="173.0" layoutY="246.0" opacity="0.3" prefHeight="50.0" prefWidth="84.0">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </TextField>
+            <Button fx:id="FoodDelete43" layoutX="259.0" layoutY="246.0" mnemonicParsing="false" onAction="#DeleteFood43" opacity="0.5" prefHeight="50.0" prefWidth="87.0" style="-fx-background-color: #000000;" text="Delete" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+      <Button fx:id="FoodCreate43" layoutX="356.0" layoutY="636.0" mnemonicParsing="false" onAction="#CreateFood43" opacity="0.5" prefHeight="50.0" prefWidth="87.0" style="-fx-background-color: #000000;" text="Create" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Button>
+      <Pane fx:id="Food44" disable="true" layoutX="543.0" layoutY="390.0" prefHeight="296.0" prefWidth="346.0" visible="false">
+         <children>
+            <ImageView fx:id="FoodImage44" fitHeight="242.0" fitWidth="346.0" pickOnBounds="true" smooth="false">
+               <image>
+                  <Image url="@../image/UploadImage4.png" />
+               </image></ImageView>
+            <TextField fx:id="FoodName44" alignment="CENTER" layoutY="246.0" opacity="0.3" prefHeight="50.0" prefWidth="170.0">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="FoodPrice44" alignment="CENTER" layoutX="173.0" layoutY="246.0" opacity="0.3" prefHeight="50.0" prefWidth="84.0">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </TextField>
+            <Button fx:id="FoodDelete44" layoutX="259.0" layoutY="246.0" mnemonicParsing="false" onAction="#DeleteFood44" opacity="0.5" prefHeight="50.0" prefWidth="87.0" style="-fx-background-color: #000000;" text="Delete" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+      <Button fx:id="FoodCreate44" layoutX="802.0" layoutY="636.0" mnemonicParsing="false" onAction="#CreateFood44" opacity="0.5" prefHeight="50.0" prefWidth="87.0" style="-fx-background-color: #000000;" text="Create" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Button>
+      <Pane layoutX="1050.0" layoutY="51.0" prefHeight="699.0" prefWidth="396.0">
+         <children>
+            <ImageView fitHeight="296.0" fitWidth="396.0" pickOnBounds="true" smooth="false" />
+            <TextField alignment="CENTER" layoutX="11.0" layoutY="326.0" prefHeight="70.0" prefWidth="375.0" promptText="Restaurant Name" styleClass="restaurantstextcolor4" stylesheets="@Style.css">
+               <font>
+                  <Font name="Cambria" size="36.0" />
+               </font>
+            </TextField>
+            <Label layoutX="20.0" layoutY="400.0" prefHeight="53.0" prefWidth="355.0" text="Opens from :             AM to             PM" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <TextField layoutX="9.0" layoutY="540.0" prefHeight="78.0" prefWidth="375.0" promptText="Restaurant Address" styleClass="restaurantstextcolor4" stylesheets="@Style.css">
+               <font>
+                  <Font name="Cambria" size="19.0" />
+               </font>
+            </TextField>
+            <Button alignment="CENTER" contentDisplay="CENTER" layoutX="134.0" layoutY="626.0" mnemonicParsing="false" onAction="#Restaurant4Submit" opacity="0.8" style="-fx-background-radius: 10; -fx-background-color: #00bb00;" styleClass="submitButton4" stylesheets="@Style.css" text="Submit" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Cambria" size="25.0" />
+               </font>
+            </Button>
+            <Label fx:id="Services1" layoutX="256.0" layoutY="462.0" prefHeight="70.0" prefWidth="104.0" textFill="WHITE">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Spinner fx:id="StartWorkHours1" editable="true" layoutX="139.0" layoutY="416.0" prefHeight="25.0" prefWidth="57.0" style="-fx-background-color: #0000bb;" />
+            <Spinner fx:id="EndWorkHours1" editable="true" layoutX="268.0" layoutY="416.0" prefHeight="25.0" prefWidth="57.0" style="-fx-background-color: #0000bb;" />
+            <RadioButton fx:id="GetOut1" layoutX="34.0" layoutY="470.0" mnemonicParsing="false" onAction="#getFood" text="GetOut" textFill="WHITE">
+               <font>
+                  <Font name="Cambria" size="18.0" />
+               </font>
+               <toggleGroup>
+                  <ToggleGroup fx:id="Kind1" />
+               </toggleGroup>
+               <effect>
+                  <Blend />
+               </effect>
+            </RadioButton>
+            <RadioButton fx:id="Lodge1" layoutX="33.0" layoutY="507.0" mnemonicParsing="false" onAction="#getFood" text="Lodge" textFill="WHITE">
+               <toggleGroup>
+                  <ToggleGroup fx:id="Kind1" />
+               </toggleGroup>
+               <font>
+                  <Font name="Cambria" size="18.0" />
+               </font>
+               <effect>
+                  <Blend />
+               </effect>
+            </RadioButton>
+            <Spinner fx:id="services1" layoutX="149.0" layoutY="480.0" prefHeight="40.0" prefWidth="71.0" style="-fx-background-color: #0000bb;" />
+         </children>
+      </Pane>
+   </children>
+</Pane>

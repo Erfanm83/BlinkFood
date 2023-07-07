@@ -6,33 +6,37 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Spinner;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.IOException;
+import java.io.*;
+import java.net.Socket;
 import java.util.Objects;
 import java.util.Scanner;
 
 public class Checker {
-    ///////////////////////////////////////
-    @FXML
-    public TextField amountpayable = null;
-//    public TextField getAmountpayable() {
-//        return amountpayable;
-//    }
-    //////////////////////////////////////
 
-    ////////////////////////////////////////Files
-    String CreateAccountFile = "D:\\Codes\\Java\\Blink Food\\src\\main\\java\\com\\example\\Files\\CreateAccount.txt";
-    String AdminFile = "D:\\Codes\\Java\\Blink Food\\ReadMe.txt";
+    public Stage stage;
+    public Scene scene;
 
+    ///////////////////////////////////////////////////////// *** Files *** ///////////////////////////////////////////////////////////
+//    String CreateAccountFile = "C:\\Users\\Admin\\IdeaProjects\\BlinkFood\\BlinkFood\\src\\main\\resources\\com\\example\\Data\\Files\\CreateAccount.txt";
+//    String AdminFile = "ReadMe.txt";
 
-    ////////////////////////////////////////Methods////////////////////////////////////////
+    String FoodNameAndPrice1 = "BlinkFood\\src\\Files\\FoodName&Price1.txt";
+    String FoodNameAndPrice2 = "BlinkFood\\src\\Files\\FoodName&Price2.txt";
+    String FoodNameAndPrice3 = "BlinkFood\\src\\Files\\FoodName&Price3.txt";
+    String FoodNameAndPrice4 = "BlinkFood\\src\\Files\\FoodName&Price4.txt";
 
-    ////////////////////////////////////////Loaders
+    //////////////////////////////////////// *** Methods *** ////////////////////////////////////////
+    Socket socket;
+    Scanner scanner;
+    DataInputStream input;
+    DataOutputStream output;
+
+    //////////////////////////////////////// *** Loaders *** ////////////////////////////////////////
     public void Loader(ActionEvent e, String address, Stage stage, Scene scene, int x, int y) throws IOException {
         Parent root;
         try {
@@ -63,88 +67,12 @@ public class Checker {
         }
     }
 
-    ////////////////////////////////////////Create Account Check
-    public boolean UsernameChecker(String username) {
-        return !username.isEmpty() ? true : false;
-    }
-
-    public boolean EmailChecker(String email) {
-        return !email.isEmpty() ? true : false;
-    }
-
-    public boolean PhoneNumberChecker(String phoneNumber) {
-        if (phoneNumber.length() != 11) {
-            return false;
-        }
-        for (int i = 0; i < phoneNumber.length(); i++) {
-            if (!Character.isDigit(phoneNumber.charAt(i))) {
-                return false;
-            }
-        }
-        return true;
-    }
-
-    public boolean AgeChecker(int age) {
-        return age >= 18 ? true : false;
-    }
-
-    public boolean PasswordChecker(String password, String confirmPassword) {
-        return password.equals(confirmPassword) ? true : false;
-    }
-
-    ////////////////////////////////////////Admin & Login Check
-    public boolean LoginChecker(String loginUsername, String loginPassword) {
-        try {
-            File LoginChecker = new File(CreateAccountFile);
-            Scanner scanner = new Scanner(LoginChecker);
-            String user = null;
-            String pass = null;
-
-            while (scanner.hasNextLine()) {
-                String line = scanner.nextLine();
-                String[] parts = line.split(" ");
-                user = parts[1];
-                pass = parts[3];
-            }
-            if (loginUsername.equals(user) && loginPassword.equals(pass))
-                return true;
-            return false;
-        } catch (FileNotFoundException exception) {
-            System.out.println("File not found: ");
-            return false;
-        }
-    }
-
-    public boolean AdminChecker(String adminUsername, String adminPassword) {
-        try {
-            File AdminChecker = new File(AdminFile);
-            Scanner scanner = new Scanner(AdminChecker);
-            String user = null;
-            String pass = null;
-
-            while (scanner.hasNextLine()) {
-                String line = scanner.nextLine();
-                String[] parts = line.split(" ");
-                user = parts[1];
-                pass = parts[3];
-            }
-            if (adminUsername.equals(user) && adminPassword.equals(pass))
-                return true;
-            return false;
-        } catch (FileNotFoundException exception) {
-            System.out.println("File not found: ");
-            return false;
-        }
-    }
-
-    ////////////////////////////////////////Buy Check
+    //////////////////////////////////////// *** Buy Check *** ////////////////////////////////////////
     public boolean AccountChecker(String Cash, String Cost) {
         if (Integer.parseInt(Cash) >= Integer.parseInt(Cost))
             return true;
         return false;
     }
-
-    ///////////////////////////////////////////////////////////////////////////////////////////////////
 
     public boolean CaptchaChecker(String Captcha, String Captchatxt) {
         return Captcha.equals(Captchatxt) ? true : false;
@@ -168,4 +96,128 @@ public class Checker {
     public boolean CardnumChecker(String CardNum) {
         return CardNum.length() == 16 ? true : false;
     }
+
+
+    public void RestaurantComponentLoader(String address, TextField t1, TextField t2, TextField t3, TextField t4, TextField t5,
+                                          TextField t6, TextField t7, TextField t8, TextField t9, String s, int i1, int i2,
+                                          int i3, TextField t10) throws IOException {
+        try {
+            //Load From Server
+            String component = address;
+            output.writeUTF("RestaurantComponent");
+            output.flush();
+            output.writeUTF("Load");
+            output.flush();
+            output.writeUTF(component);
+            output.flush();
+
+            t1.setText(input.readUTF());
+            t2.setText(input.readUTF());
+            t3.setText(input.readUTF());
+            t4.setText(input.readUTF());
+            t5.setText(input.readUTF());
+            t6.setText(input.readUTF());
+            t7.setText(input.readUTF());
+            t8.setText(input.readUTF());
+            t9.setText(input.readUTF());
+            s = input.readUTF();
+            i1 = Integer.parseInt(input.readUTF());
+            i2 = Integer.parseInt(input.readUTF());
+            i3 = Integer.parseInt(input.readUTF());
+            t10.setText(input.readUTF());
+//            Image image1 = new Image(foodImage11);
+//            FoodImage11.setImage(image1);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+//    Tartib
+//          FoodName11.setText(input.readUTF());
+//            FoodName12.setText(input.readUTF());
+//            FoodName13.setText(input.readUTF());
+//            FoodName14.setText(input.readUTF());
+//            FoodPrice11.setText(input.readUTF());
+//            FoodPrice12.setText(input.readUTF());
+//            FoodPrice13.setText(input.readUTF());
+//            FoodPrice14.setText(input.readUTF());
+//            RestaurantName.setText(input.readUTF());
+//    restaurantkind = input.readUTF();
+//    startworkhour = Integer.parseInt(input.readUTF());
+//    endworkhour = Integer.parseInt(input.readUTF());
+//    NumberOfServices = Integer.parseInt(input.readUTF());
+//            RestaurantAddress.setText(input.readUTF());
+
+    public void RestaurantComponentSaver(String address, TextField t1, TextField t2, TextField t3, TextField t4, TextField t5,
+                                         TextField t6, TextField t7, TextField t8, TextField t9, String s, int i1, int i2,
+                                         int i3, TextField t10) throws IOException {
+        try {
+            //Send To Server
+            String component = address;
+            output.writeUTF("RestaurantComponent");
+            output.flush();
+            output.writeUTF("Save");
+            output.flush();
+            output.writeUTF(component);
+            output.flush();
+
+            output.writeUTF(t1.getText());
+            output.flush();
+            output.writeUTF(t2.getText());
+            output.flush();
+            output.writeUTF(t3.getText());
+            output.flush();
+            output.writeUTF(t4.getText());
+            output.flush();
+            output.writeUTF(t5.getText());
+            output.flush();
+            output.writeUTF(t6.getText());
+            output.flush();
+            output.writeUTF(t7.getText());
+            output.flush();
+            output.writeUTF(t8.getText());
+            output.flush();
+            output.writeUTF(t9.getText());
+            output.flush();
+            output.writeUTF(s);
+            output.flush();
+            output.writeUTF(String.valueOf(i1));
+            output.flush();
+            output.writeUTF(String.valueOf(i2));
+            output.flush();
+            output.writeUTF(String.valueOf(i3));
+            output.flush();
+            output.writeUTF(t10.getText());
+            output.flush();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+    //Download Components From Server
+//    protected void DownloadComponent(String Filename , Socket socket , FileOutputStream fileOutputStream){
+//        try {
+//            input = new DataInputStream(new BufferedInputStream(socket.getInputStream()));
+//            output = new DataOutputStream(new BufferedOutputStream(socket.getOutputStream()));
+//            output.writeUTF(Filename);
+//            output.flush();
+//            if (input.readUTF().equals("Start download.")) {
+//                System.out.println("Downloading ...");
+//                fileOutputStream = new FileOutputStream("C:\\Users\\Admin\\IdeaProjects\\BlinkFood\\BlinkFood\\src\\main\\resources\\com\\example\\Client\\Image\\" + Filename);
+//                int bytes = 0;
+//
+//                long size = input.readLong();     // read file size
+//                byte[] buffer = new byte[4 * 1024];
+//                while (size > 0 && (bytes = input.read(buffer, 0, (int) Math.min(buffer.length, size))) != -1) {
+//                    fileOutputStream.write(buffer, 0, bytes);
+//                    size -= bytes;      // read upto file size
+//                }
+//                System.out.println( Filename + " Downloaded.");
+//                fileOutputStream.close();
+//            } else {
+//                System.out.println("File Not Exist.");
+//            }
+//        }catch (Exception exception){
+//            System.out.println(exception);
+//        }
+//    }
 }
