@@ -5,7 +5,6 @@
 <?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.control.Spinner?>
 <?import javafx.scene.control.TextField?>
-<?import javafx.scene.control.ToggleGroup?>
 <?import javafx.scene.effect.Blend?>
 <?import javafx.scene.effect.InnerShadow?>
 <?import javafx.scene.image.Image?>
@@ -18,7 +17,7 @@
    <children>
       <ImageView fitHeight="750.0" fitWidth="1500.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../image/Restaurants/Cafe.jpg" />
+            <Image url="@../Image/Restaurants/Cafe.jpg" />
          </image>
       </ImageView>
       <Button layoutX="20.0" layoutY="30.0" mnemonicParsing="false" onAction="#LoginRestaurants" opacity="0.0" prefHeight="40.0" prefWidth="50.0" text="Button" />
@@ -144,7 +143,7 @@
       </Pane>
       <Pane fx:id="Portals" disable="true" layoutX="530.0" layoutY="225.0" prefHeight="300.0" prefWidth="440.0" visible="false">
          <children>
-            <Rectangle fx:id="RectAnimation2" fill="#0000bb" height="300.0" stroke="BLACK" strokeType="INSIDE" width="440.0">
+            <Rectangle fill="#0000bb" height="300.0" stroke="BLACK" strokeType="INSIDE" width="440.0">
                <effect>
                   <InnerShadow height="20.0" radius="9.5" width="20.0" />
                </effect>
@@ -164,17 +163,17 @@
             </Label>
             <ImageView fitHeight="120.0" fitWidth="120.0" layoutX="20.0" layoutY="160.0" onMouseClicked="#MellatPrice" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../image/Portals/MellatLogo.jpg" />
+                  <Image url="@../Image/Portals/MellatLogo.jpg" />
                </image>
             </ImageView>
             <ImageView fitHeight="120.0" fitWidth="120.0" layoutX="160.0" layoutY="160.0" onMouseClicked="#MelliPrice" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../image/Portals/MelliLogo.png" />
+                  <Image url="@../Image/Portals/MelliLogo.png" />
                </image>
             </ImageView>
             <ImageView fitHeight="120.0" fitWidth="120.0" layoutX="300.0" layoutY="160.0" onMouseClicked="#SamanPrice" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../image/Portals/SamanLogo.jpg" />
+                  <Image url="@../Image/Portals/SamanLogo.jpg" />
                </image>
             </ImageView>
          </children>
@@ -182,7 +181,7 @@
       <Pane layoutX="1050.0" layoutY="51.0" prefHeight="699.0" prefWidth="396.0">
          <children>
             <ImageView fitHeight="296.0" fitWidth="396.0" pickOnBounds="true" smooth="false" />
-            <TextField alignment="CENTER" layoutX="11.0" layoutY="326.0" prefHeight="70.0" prefWidth="375.0" promptText="Restaurant Name" styleClass="restaurantstextcolor" stylesheets="@Style.css">
+            <TextField fx:id="RestaurantName" alignment="CENTER" editable="false" layoutX="11.0" layoutY="326.0" prefHeight="70.0" prefWidth="375.0" promptText="Restaurant Name" styleClass="restaurantstextcolor" stylesheets="@Style.css">
                <font>
                   <Font name="Cambria" size="36.0" />
                </font>
@@ -192,23 +191,17 @@
                   <Font size="20.0" />
                </font>
             </Label>
-            <Spinner fx:id="StartWorkHours" editable="true" layoutX="143.0" layoutY="414.0" prefHeight="25.0" prefWidth="50.0" style="-fx-background-color: #0000bb;" />
-            <Spinner fx:id="EndWorkHours" editable="true" layoutX="272.0" layoutY="414.0" prefHeight="25.0" prefWidth="50.0" style="-fx-background-color: #0000bb;" />
+            <Spinner fx:id="StartWorkHours" layoutX="143.0" layoutY="414.0" prefHeight="25.0" prefWidth="50.0" style="-fx-background-color: #0000bb;" />
+            <Spinner fx:id="EndWorkHours" layoutX="272.0" layoutY="414.0" prefHeight="25.0" prefWidth="50.0" style="-fx-background-color: #0000bb;" />
             <RadioButton fx:id="GetOut" layoutX="38.0" layoutY="468.0" mnemonicParsing="false" text="GetOut" textFill="WHITE">
                <font>
                   <Font name="Cambria" size="18.0" />
                </font>
-               <toggleGroup>
-                  <ToggleGroup fx:id="Kind" />
-               </toggleGroup>
                <effect>
                   <Blend />
                </effect>
             </RadioButton>
             <RadioButton fx:id="Lodge" layoutX="37.0" layoutY="505.0" mnemonicParsing="false" text="Lodge" textFill="WHITE">
-               <toggleGroup>
-                  <ToggleGroup fx:id="Kind" />
-               </toggleGroup>
                <font>
                   <Font name="Cambria" size="18.0" />
                </font>
@@ -217,7 +210,7 @@
                </effect>
             </RadioButton>
             <Spinner fx:id="services" layoutX="153.0" layoutY="478.0" prefHeight="40.0" prefWidth="71.0" style="-fx-background-color: #0000bb;" />
-            <TextField layoutX="9.0" layoutY="540.0" prefHeight="78.0" prefWidth="375.0" promptText="Restaurant Address" styleClass="restaurantstextcolor" stylesheets="@Style.css">
+            <TextField fx:id="RestaurantAddress" editable="false" layoutX="9.0" layoutY="540.0" prefHeight="78.0" prefWidth="375.0" promptText="Restaurant Address" styleClass="restaurantstextcolor" stylesheets="@Style.css">
                <font>
                   <Font name="Cambria" size="19.0" />
                </font>

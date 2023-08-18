@@ -37,7 +37,7 @@ public class Restaurant2Controller extends Checker implements Initializable {
     public TextField FoodPrice21, FoodPrice22, FoodPrice23, FoodPrice24;
     @FXML
     public TextField RestaurantName, RestaurantAddress;
-    ////////////////////////////////////////Buttons
+    //////////////////////////////////////// *** Buttons *** ////////////////////////////////////////
     @FXML
     public Button FoodCreate21, FoodCreate22, FoodCreate23, FoodCreate24;
     @FXML
@@ -54,7 +54,7 @@ public class Restaurant2Controller extends Checker implements Initializable {
     private RadioButton GetOut , Lodge;
 
     public String restaurantkind;
-    final ToggleGroup Kind = new ToggleGroup();
+//    final ToggleGroup Kind = new ToggleGroup();
     public void getFood(ActionEvent event) {
         if (GetOut.isSelected()){
             Services.setText("Bikes");
@@ -237,8 +237,8 @@ public class Restaurant2Controller extends Checker implements Initializable {
             }
         });
         ///////////////////////////
-        GetOut.setToggleGroup(Kind);
-        Lodge.setToggleGroup(Kind);
+//        GetOut.setToggleGroup(Kind);
+//        Lodge.setToggleGroup(Kind);
         //////////////////////////
         try {
             /////////////////////////////////////////////////////////////////////////

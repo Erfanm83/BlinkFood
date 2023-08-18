@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="810.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.blinkfood.ControllerPayment">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="810.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.blinkfood.SamanPortal">
    <children>
       <ScrollPane prefHeight="800.0" prefWidth="810.0">
         <content>
@@ -27,6 +27,15 @@
                         <Font size="12.0" />
                      </font>
                   </TextField>
+                  <Button id="PooyaPassword" fx:id="PooyaPassword" layoutX="415.0" layoutY="140.0" mnemonicParsing="false" onAction="#Password" prefHeight="20.0" prefWidth="100.0" style="-fx-background-radius: 0; -fx-background-color: #ffff;" text="دریافت رمز پویا" textFill="#005eff">
+                     <font>
+                        <Font size="12.0" />
+                     </font></Button>
+                  <PasswordField fx:id="CardPassword" alignment="CENTER" editable="false" focusTraversable="false" layoutX="520.0" layoutY="140.0" pickOnBounds="false" prefHeight="20.0" prefWidth="145.0" scaleShape="false" style="-fx-background-radius: 25;">
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                  </PasswordField>
                   <PasswordField fx:id="CVV2" alignment="CENTER" layoutX="415.0" layoutY="170.0" prefHeight="20.0" prefWidth="250.0" style="-fx-background-radius: 25;">
                      <font>
                         <Font size="12.0" />
@@ -52,26 +61,17 @@
                         <Font size="25.0" />
                      </font>
                   </Label>
-                  <PasswordField fx:id="CardPassword" alignment="CENTER" editable="false" focusTraversable="false" layoutX="520.0" layoutY="140.0" pickOnBounds="false" prefHeight="20.0" prefWidth="145.0" scaleShape="false" style="-fx-background-radius: 25;">
-                     <font>
-                        <Font size="12.0" />
-                     </font>
-                  </PasswordField>
-                  <Button id="PooyaPassword" fx:id="PooyaPassword" layoutX="415.0" layoutY="140.0" mnemonicParsing="false" onAction="#password" prefHeight="20.0" prefWidth="100.0" style="-fx-background-radius: 0; -fx-background-color: #ffff;" text="دریافت رمز پویا" textFill="#005eff">
-                     <font>
-                        <Font size="12.0" />
-                     </font></Button>
                   <TextField fx:id="Email" alignment="CENTER" layoutX="415.0" layoutY="270.0" prefHeight="25.0" prefWidth="250.0" promptText="اختیاری" style="-fx-background-radius: 25;">
                      <font>
                         <Font size="12.0" />
                      </font>
                   </TextField>
-                  <Button layoutX="566.0" layoutY="301.0" mnemonicParsing="false" onAction="#PaymentCancel" opacity="0.0" prefHeight="5.0" prefWidth="48.0" style="-fx-background-radius: 25;" text="Cancel">
+                  <Button layoutX="566.0" layoutY="301.0" mnemonicParsing="false" onAction="#LoginRestaurants" opacity="0.0" prefHeight="5.0" prefWidth="48.0" style="-fx-background-radius: 25;" text="Cancel">
                      <font>
                         <Font size="14.0" />
                      </font></Button>
                   <Button layoutX="619.0" layoutY="303.0" mnemonicParsing="false" onAction="#PaymentSubmit" opacity="0.0" prefHeight="26.0" prefWidth="46.0" style="-fx-background-radius: 25;" text="Pay" />
-                  <TextField fx:id="amountpayable" alignment="CENTER" editable="false" layoutX="37.0" layoutY="329.0" prefHeight="23.0" prefWidth="101.0" style="-fx-background-radius: 0;" text="500,000">
+                  <TextField fx:id="Price" alignment="CENTER" editable="false" layoutX="37.0" layoutY="329.0" prefHeight="23.0" prefWidth="101.0" style="-fx-background-radius: 0;">
                      <font>
                         <Font size="10.0" />
                      </font>

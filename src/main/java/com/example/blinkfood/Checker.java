@@ -6,6 +6,8 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Label;
+import javafx.scene.control.PasswordField;
 import javafx.scene.control.Spinner;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
@@ -29,6 +31,24 @@ public class Checker {
     String FoodNameAndPrice2 = "BlinkFood\\src\\Files\\FoodName&Price2.txt";
     String FoodNameAndPrice3 = "BlinkFood\\src\\Files\\FoodName&Price3.txt";
     String FoodNameAndPrice4 = "BlinkFood\\src\\Files\\FoodName&Price4.txt";
+
+    String FoodImages1 = "BlinkFood\\src\\Files\\FoodImages1.txt" ;
+    String FoodImages2 = "BlinkFood\\src\\Files\\FoodImages2.txt" ;
+    String FoodImages3 = "BlinkFood\\src\\Files\\FoodImages3.txt" ;
+    String FoodImages4 = "BlinkFood\\src\\Files\\FoodImages4.txt" ;
+    String Cash = "src\\Files\\Cash.txt";
+    String PriceFile = "src\\Files\\Price.txt";
+    String CardMoney = "src\\Files\\CardMoney.txt";
+
+    public static final String CHARACTERS = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+    public static final int CAPTCHA_LENGTH = 6;
+    public static final int PASSWORD_LENGTH = 8;
+    @FXML
+    public PasswordField CardPassword;
+    @FXML
+    public Label Captcha;
+    @FXML
+    public TextField Price;
 
     //////////////////////////////////////// *** Methods *** ////////////////////////////////////////
     Socket socket;

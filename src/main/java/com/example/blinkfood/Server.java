@@ -112,7 +112,7 @@ public class Server extends Thread {
 //        }
 
     //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-//    public static void main(String[] args) {
+//    public static void main(String[] args) throws IOException {
 //        System.out.println("Start server on port: 12000");
 //        Server server = new Server(12000);
 //        server.startServer();

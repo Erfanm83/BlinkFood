@@ -37,24 +37,27 @@ public class Restaurant4Controller extends Checker implements Initializable {
     public TextField FoodPrice41, FoodPrice42, FoodPrice43, FoodPrice44;
     @FXML
     public TextField RestaurantName, RestaurantAddress;
-    ////////////////////////////////////////Buttons
+    //////////////////////////////////////// *** Buttons *** ////////////////////////////////////////
+    @FXML
+    public Button FoodCreate41, FoodCreate42, FoodCreate43, FoodCreate44;
     @FXML
     public Button FoodDelete41, FoodDelete42, FoodDelete43, FoodDelete44;
 
     //////////////////////////////////////// *** Spinner *** ////////////////////////////////////////
     @FXML
-    private Spinner<Integer> StartWorkHours, EndWorkHours , services;
-    public int startworkhour, endworkhour , NumberOfServices;
+    private Spinner<Integer> StartWorkHours, EndWorkHours, services;
+    public int startworkhour, endworkhour, NumberOfServices;
     //////////////////////////////////////// *** RadioButton *** ////////////////////////////////////////
     @FXML
     private Label Services;
     @FXML
-    private RadioButton GetOut , Lodge;
+    private RadioButton GetOut, Lodge;
 
     public String restaurantkind;
-    final ToggleGroup Kind = new ToggleGroup();
+
+    //    final ToggleGroup Kind = new ToggleGroup();
     public void getFood(ActionEvent event) {
-        if (GetOut.isSelected()){
+        if (GetOut.isSelected()) {
             Services.setText("Bikes");
             restaurantkind = "GetOut";
         } else if (Lodge.isSelected()) {
@@ -94,7 +97,66 @@ public class Restaurant4Controller extends Checker implements Initializable {
         if (Food41.isVisible() && Food42.isVisible() && Food42.isVisible() && Food42.isVisible()) {
             RestaurantComponentSaver(FoodNameAndPrice1);
         }
-        Loader(e , "AdminRestaurants.fxml" , stage , scene , 260 , 10);
+        Loader(e, "AdminRestaurants.fxml", stage, scene, 260, 10);
+    }
+
+    //////////////////////////////////////// *** Create Foods *** ////////////////////////////////////////
+
+    public void CreateFood41(ActionEvent event) {
+        FoodCreate41.setVisible(false);
+        FoodCreate41.setDisable(true);
+        Food41.setVisible(true);
+        Food41.setDisable(false);
+    }
+
+    public void CreateFood42(ActionEvent event) {
+        FoodCreate42.setVisible(false);
+        FoodCreate42.setDisable(true);
+        Food42.setVisible(true);
+        Food42.setDisable(false);
+    }
+
+    public void CreateFood43(ActionEvent event) {
+        FoodCreate43.setVisible(false);
+        FoodCreate43.setDisable(true);
+        Food43.setVisible(true);
+        Food43.setDisable(false);
+    }
+
+    public void CreateFood44(ActionEvent event) {
+        FoodCreate44.setVisible(false);
+        FoodCreate44.setDisable(true);
+        Food44.setVisible(true);
+        Food44.setDisable(false);
+    }
+
+    ////////////////////////////////////////Delete Foods
+    public void DeleteFood41(ActionEvent event) {
+        FoodCreate41.setVisible(true);
+        FoodCreate41.setDisable(false);
+        Food41.setVisible(false);
+        Food41.setDisable(true);
+    }
+
+    public void DeleteFood42(ActionEvent event) {
+        FoodCreate42.setVisible(true);
+        FoodCreate42.setDisable(false);
+        Food42.setVisible(false);
+        Food42.setDisable(true);
+    }
+
+    public void DeleteFood43(ActionEvent event) {
+        FoodCreate43.setVisible(true);
+        FoodCreate43.setDisable(false);
+        Food43.setVisible(false);
+        Food43.setDisable(true);
+    }
+
+    public void DeleteFood44(ActionEvent event) {
+        FoodCreate44.setVisible(true);
+        FoodCreate44.setDisable(false);
+        Food44.setVisible(false);
+        Food44.setDisable(true);
     }
 
     public void RestaurantComponentSaver(String address) throws IOException {
@@ -144,10 +206,10 @@ public class Restaurant4Controller extends Checker implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
 //////////////////////////////////////// *** Spinner *** ////////////////////////////////////////
-        SpinnerValueFactory<Integer> StartValue = new SpinnerValueFactory.IntegerSpinnerValueFactory(1 , 12);
+        SpinnerValueFactory<Integer> StartValue = new SpinnerValueFactory.IntegerSpinnerValueFactory(1, 12);
 //        StartValue.setValue(5);
         StartWorkHours.setValueFactory(StartValue);
-        SpinnerValueFactory<Integer> EndValue = new SpinnerValueFactory.IntegerSpinnerValueFactory(1 , 12);
+        SpinnerValueFactory<Integer> EndValue = new SpinnerValueFactory.IntegerSpinnerValueFactory(1, 12);
 //        EndValue.setValue(12);
         EndWorkHours.setValueFactory(EndValue);
         SpinnerValueFactory<Integer> servicesValue = new SpinnerValueFactory.IntegerSpinnerValueFactory(0, 15);
@@ -177,8 +239,8 @@ public class Restaurant4Controller extends Checker implements Initializable {
             }
         });
         ///////////////////////////
-        GetOut.setToggleGroup(Kind);
-        Lodge.setToggleGroup(Kind);
+//        GetOut.setToggleGroup(Kind);
+//        Lodge.setToggleGroup(Kind);
         //////////////////////////
         try {
             /////////////////////////////////////////////////////////////////////////

@@ -8,6 +8,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
@@ -23,12 +24,11 @@ public class Restaurant1Controller extends Checker implements Initializable {
     ////////////////////////////////////////Variables////////////////////////////////////////
 
     ////////////////////////////////////////Panes
-    @FXML
     public Pane Food11, Food12, Food13, Food14;
 
     ////////////////////////////////////////ImageViews
     @FXML
-    public ImageView FoodImage11, FoodImage12, FoodImage13, FoodImage14;
+    public ImageView FoodImage11, FoodImage12, FoodImage13, FoodImage14 , Restaurant1Profile;
 
     ////////////////////////////////////////TextFields
     @FXML
@@ -55,7 +55,9 @@ public class Restaurant1Controller extends Checker implements Initializable {
     private RadioButton GetOut, Lodge;
 
     public String restaurantkind;
-    final ToggleGroup Kind = new ToggleGroup();
+
+//    @FXML
+//    final ToggleGroup Kind = new ToggleGroup();
 
     public void getFood(ActionEvent event) {
         if (GetOut.isSelected()) {
@@ -79,7 +81,6 @@ public class Restaurant1Controller extends Checker implements Initializable {
         output = new DataOutputStream(new BufferedOutputStream(socket.getOutputStream()));
         input = new DataInputStream(new BufferedInputStream(socket.getInputStream()));
     }
-
 
     ////////////////////////////////////////Create Foods
     public void CreateFood11(ActionEvent event) {
@@ -138,8 +139,8 @@ public class Restaurant1Controller extends Checker implements Initializable {
         Food14.setVisible(false);
         Food14.setDisable(true);
     }
-
-    //    public void ImageLoader() {
+//    ////////////////////////////////////////////////////////////////////////
+//        public void ImageLoader() {
 //        FileChooser fileChooser = new FileChooser();
 //        fileChooser.setTitle("Open Image File");
 //        FileChooser.ExtensionFilter extFilter = new FileChooser.ExtensionFilter("Image files (*.png,*.jpg)", "*.png", "*.jpg");
@@ -152,27 +153,88 @@ public class Restaurant1Controller extends Checker implements Initializable {
 //        }
 //    }
     ////////////////////////////////////////////////////////////////////////
-//    public void ImageLoader1(MouseEvent event) throws FileNotFoundException {
-//        try {
-//            FileChooser fileChooser = new FileChooser();
-//            fileChooser.setTitle("Open Image File");
-//            FileChooser.ExtensionFilter extFilter = new FileChooser.ExtensionFilter("Image files (.png,.jpg)", ".png", ".jpg");
-//            fileChooser.getExtensionFilters().add(extFilter);
-//            File selectedFile = fileChooser.showOpenDialog(new Stage());
-//            if (selectedFile != null) {
-//                Image image = new Image(selectedFile.toURI().toString());
-//                FoodImage11.setImage(image);
-//                String path1 = (String) selectedFile.getAbsolutePath();
-//                File pathFiler = new File(imageFoods1);
-//                PrintWriter writer = new PrintWriter(pathFiler);
-//                writer.write("Food1Path: ".concat(path1));
-////                writer.write("Food1Path: ".concat(path1));
-//                writer.close();
-//            }
-//        } catch (java.io.IOException exception) {
-//            System.out.println("Image Exception");
-//        }
-//    }
+    public void ImageLoader1(MouseEvent event) throws FileNotFoundException {
+        try {
+            FileChooser fileChooser = new FileChooser();
+            fileChooser.setTitle("Open Image File");
+            FileChooser.ExtensionFilter extFilter = new FileChooser.ExtensionFilter("Image files (*.png,*.jpg)", "*.png", "*.jpg");
+            fileChooser.getExtensionFilters().add(extFilter);
+            File selectedFile = fileChooser.showOpenDialog(new Stage());
+            if (selectedFile != null) {
+                Image image = new Image(selectedFile.toURI().toString());
+                FoodImage11.setImage(image);
+                String path1 = selectedFile.getAbsolutePath();
+                File pathFiler = new File(FoodImages1);
+                PrintWriter writer = new PrintWriter(pathFiler);
+                writer.write("Food1Path: " + path1);
+
+                writer.write("Food1Path: ".concat(path1));
+                writer.close();
+            }
+        } catch (java.io.IOException exception) {
+            System.out.println("Image Exception");
+        }
+    }
+    public void ImageLoader2(MouseEvent event) throws FileNotFoundException {
+        try {
+            FileChooser fileChooser = new FileChooser();
+            fileChooser.setTitle("Open Image File");
+            FileChooser.ExtensionFilter extFilter = new FileChooser.ExtensionFilter("Image files (*.png,*.jpg)", "*.png", "*.jpg");
+            fileChooser.getExtensionFilters().add(extFilter);
+            File selectedFile = fileChooser.showOpenDialog(new Stage());
+            if (selectedFile != null) {
+                Image image = new Image(selectedFile.toURI().toString());
+                FoodImage12.setImage(image);
+                String path2 = selectedFile.getAbsolutePath();
+                File pathFiler = new File(FoodImages2);
+                PrintWriter writer = new PrintWriter(pathFiler);
+                writer.write("Food2Path: " + path2);
+                writer.close();
+            }
+        } catch (java.io.IOException exception) {
+            System.out.println("Image Exception");
+        }
+    }
+    public void ImageLoader3(MouseEvent event) throws FileNotFoundException {
+        try {
+            FileChooser fileChooser = new FileChooser();
+            fileChooser.setTitle("Open Image File");
+            FileChooser.ExtensionFilter extFilter = new FileChooser.ExtensionFilter("Image files (*.png,*.jpg)", "*.png", "*.jpg");
+            fileChooser.getExtensionFilters().add(extFilter);
+            File selectedFile = fileChooser.showOpenDialog(new Stage());
+            if (selectedFile != null) {
+                Image image = new Image(selectedFile.toURI().toString());
+                FoodImage13.setImage(image);
+                String path3 = selectedFile.getAbsolutePath();
+                File pathFiler = new File(FoodImages3);
+                PrintWriter writer = new PrintWriter(pathFiler);
+                writer.write("Food3Path: " + path3);
+                writer.close();
+            }
+        } catch (java.io.IOException exception) {
+            System.out.println("Image Exception");
+        }
+    }
+    public void ImageLoader4(MouseEvent event) throws FileNotFoundException {
+        try {
+            FileChooser fileChooser = new FileChooser();
+            fileChooser.setTitle("Open Image File");
+            FileChooser.ExtensionFilter extFilter = new FileChooser.ExtensionFilter("Image files (*.png,*.jpg)", "*.png", "*.jpg");
+            fileChooser.getExtensionFilters().add(extFilter);
+            File selectedFile = fileChooser.showOpenDialog(new Stage());
+            if (selectedFile != null) {
+                Image image = new Image(selectedFile.toURI().toString());
+                FoodImage14.setImage(image);
+                String path4 = selectedFile.getAbsolutePath();
+                File pathFiler = new File(FoodImages4);
+                PrintWriter writer = new PrintWriter(pathFiler);
+                writer.write("Food4Path: " + path4);
+                writer.close();
+            }
+        } catch (java.io.IOException exception) {
+            System.out.println("Image Exception");
+        }
+    }
     ////////////////////////////////////////////////////////////////////////
     public void Restaurant1Submit(ActionEvent e) throws IOException {
         if (Food11.isVisible() && Food12.isVisible() && Food12.isVisible() && Food12.isVisible()) {
@@ -236,6 +298,7 @@ public class Restaurant1Controller extends Checker implements Initializable {
             output.flush();
             output.writeUTF(RestaurantAddress.getText());
             output.flush();
+
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -277,9 +340,9 @@ public class Restaurant1Controller extends Checker implements Initializable {
             }
         });
         ///////////////////////////
-        GetOut.setToggleGroup(Kind);
-        Lodge.setToggleGroup(Kind);
-        //////////////////////////
+//        GetOut.setToggleGroup(Kind);
+//        Lodge.setToggleGroup(Kind);
+        //////////////////////////a
         try {
             /////////////////////////////////////////////////////////////////////////
             //Load From Server
@@ -318,5 +381,64 @@ public class Restaurant1Controller extends Checker implements Initializable {
         } catch (IOException e) {
             e.printStackTrace();
         }
+
+        /////////////////////////////////////////////////////////////////////////
+        try {
+            File filer= new File(FoodImages1);
+            Scanner scanner1 = new Scanner(filer);
+            String str = null;
+            while (scanner1.hasNextLine()){
+                String line = scanner1.nextLine();
+                String[] parts = line.split(" ");
+                str = parts [1];
+            }
+            Image image = new Image(str);
+            FoodImage11.setImage(image);
+        } catch (FileNotFoundException e) {
+            throw new RuntimeException(e);
+        }
+        try {
+            File filer= new File(FoodImages2);
+            Scanner scanner1 = new Scanner(filer);
+            String str = null;
+            while (scanner1.hasNextLine()){
+                String line = scanner1.nextLine();
+                String[] parts = line.split(" ");
+                str = parts [1];
+            }
+            Image image = new Image(str);
+            FoodImage12.setImage(image);
+        } catch (FileNotFoundException e) {
+            throw new RuntimeException(e);
+        }
+        try {
+            File filer= new File(FoodImages3);
+            Scanner scanner1 = new Scanner(filer);
+            String str = null;
+            while (scanner1.hasNextLine()){
+                String line = scanner1.nextLine();
+                String[] parts = line.split(" ");
+                str = parts [1];
+            }
+            Image image = new Image(str);
+            FoodImage13.setImage(image);
+        } catch (FileNotFoundException e) {
+            throw new RuntimeException(e);
+        }
+        try {
+            File filer= new File(FoodImages4);
+            Scanner scanner1 = new Scanner(filer);
+            String str = null;
+            while (scanner1.hasNextLine()){
+                String line = scanner1.nextLine();
+                String[] parts = line.split(" ");
+                str = parts [1];
+            }
+            Image image = new Image(str);
+            FoodImage14.setImage(image);
+        } catch (FileNotFoundException e) {
+            throw new RuntimeException(e);
+        }
+
     }
 }

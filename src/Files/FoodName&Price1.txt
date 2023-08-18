@@ -1,1 +1,1 @@
-FoodName11: fcweew FoodName12: wecew FoodName13: ecew FoodName14: ewce FoodPrice11: 23000 FoodPrice12: 50000 FoodPrice13: 43000 FoodPrice14: 2333 RestaurantName: ShaeedAsegh RestaurantKind: Lodge StartWorkHours: 1 EndWorkHours: 12 NumberofServices: 12 RestaurantAddress: B14
+FoodName11: AkbarJuje FoodName12: jkjcmn FoodName13: ,mbv,hj FoodName14: CrushPolo FoodPrice11: 23000444 FoodPrice12: m,n,mbv, FoodPrice13: vhj,jhvjh FoodPrice14: jh,vjvj RestaurantName: AkbarJuje RestaurantKind: GetOut StartWorkHours: 8 EndWorkHours: 11 NumberofServices: 6 RestaurantAddress: Mashhad

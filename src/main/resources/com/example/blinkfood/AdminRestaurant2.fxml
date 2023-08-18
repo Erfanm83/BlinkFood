@@ -5,7 +5,6 @@
 <?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.control.Spinner?>
 <?import javafx.scene.control.TextField?>
-<?import javafx.scene.control.ToggleGroup?>
 <?import javafx.scene.effect.Blend?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -16,15 +15,14 @@
    <children>
       <ImageView fitHeight="750.0" fitWidth="1500.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../image/Restaurants/FastFood.jpg" />
-         </image>
-      </ImageView>
+            <Image url="@../Image/Restaurants/FastFood.jpg" />
+         </image></ImageView>
       <Button layoutX="20.0" layoutY="30.0" mnemonicParsing="false" onAction="#AdminRestaurants" opacity="0.0" prefHeight="40.0" prefWidth="50.0" />
       <Pane fx:id="Food21" disable="true" layoutX="97.0" layoutY="50.0" prefHeight="296.0" prefWidth="346.0" visible="false">
          <children>
             <ImageView fx:id="FoodImage21" fitHeight="242.0" fitWidth="346.0" pickOnBounds="true" smooth="false">
                <image>
-                  <Image url="@../image/UploadImage2.png" />
+                  <Image url="@../Image/UploadImage2.png" />
                </image></ImageView>
             <TextField fx:id="FoodName21" alignment="CENTER" layoutY="246.0" opacity="0.3" prefHeight="50.0" prefWidth="170.0">
                <font>
@@ -52,7 +50,7 @@
          <children>
             <ImageView fx:id="FoodImage22" fitHeight="242.0" fitWidth="346.0" pickOnBounds="true" smooth="false">
                <image>
-                  <Image url="@../image/UploadImage2.png" />
+                  <Image url="@../Image/UploadImage2.png" />
                </image></ImageView>
             <TextField fx:id="FoodName22" alignment="CENTER" layoutY="246.0" opacity="0.3" prefHeight="50.0" prefWidth="170.0">
                <font>
@@ -80,7 +78,7 @@
          <children>
             <ImageView fx:id="FoodImage23" fitHeight="242.0" fitWidth="346.0" pickOnBounds="true" smooth="false">
                <image>
-                  <Image url="@../image/UploadImage2.png" />
+                  <Image url="@../Image/UploadImage2.png" />
                </image></ImageView>
             <TextField fx:id="FoodName23" alignment="CENTER" layoutY="246.0" opacity="0.3" prefHeight="50.0" prefWidth="170.0">
                <font>
@@ -108,7 +106,7 @@
          <children>
             <ImageView fx:id="FoodImage24" fitHeight="242.0" fitWidth="346.0" pickOnBounds="true" smooth="false">
                <image>
-                  <Image url="@../image/UploadImage2.png" />
+                  <Image url="@../Image/UploadImage2.png" />
                </image></ImageView>
             <TextField fx:id="FoodName24" alignment="CENTER" layoutY="246.0" opacity="0.3" prefHeight="50.0" prefWidth="170.0">
                <font>
@@ -134,8 +132,11 @@
       </Button>
       <Pane layoutX="1050.0" layoutY="51.0" prefHeight="699.0" prefWidth="396.0">
          <children>
-            <ImageView fitHeight="296.0" fitWidth="396.0" pickOnBounds="true" smooth="false" />
-            <TextField alignment="CENTER" layoutX="11.0" layoutY="326.0" prefHeight="70.0" prefWidth="375.0" promptText="Restaurant Name" styleClass="restaurantstextcolor2" stylesheets="@Style.css">
+            <ImageView fitHeight="296.0" fitWidth="396.0" pickOnBounds="true" smooth="false">
+               <image>
+                  <Image url="@../Image/UploadImage2.png" />
+               </image></ImageView>
+            <TextField fx:id="RestaurantName" alignment="CENTER" layoutX="11.0" layoutY="326.0" prefHeight="70.0" prefWidth="375.0" promptText="Restaurant Name" styleClass="restaurantstextcolor2" stylesheets="@Style.css">
                <font>
                   <Font name="Cambria" size="36.0" />
                </font>
@@ -145,7 +146,7 @@
                   <Font size="20.0" />
                </font>
             </Label>
-            <TextField layoutX="9.0" layoutY="540.0" prefHeight="78.0" prefWidth="375.0" promptText="Restaurant Address" styleClass="restaurantstextcolor2" stylesheets="@Style.css">
+            <TextField fx:id="RestaurantAddress" layoutX="9.0" layoutY="540.0" prefHeight="78.0" prefWidth="375.0" promptText="Restaurant Address" styleClass="restaurantstextcolor2" stylesheets="@Style.css">
                <font>
                   <Font name="Cambria" size="19.0" />
                </font>
@@ -155,28 +156,14 @@
                   <Font name="Cambria" size="25.0" />
                </font>
             </Button>
-            <Label fx:id="Services1" layoutX="256.0" layoutY="459.0" prefHeight="70.0" prefWidth="104.0" textFill="WHITE">
+            <Label fx:id="Services" layoutX="256.0" layoutY="459.0" prefHeight="70.0" prefWidth="104.0" textFill="WHITE">
                <font>
                   <Font size="24.0" />
                </font>
             </Label>
-            <Spinner fx:id="StartWorkHours1" editable="true" layoutX="139.0" layoutY="413.0" prefHeight="25.0" prefWidth="57.0" style="-fx-background-color: #0000bb;" />
-            <Spinner fx:id="EndWorkHours1" editable="true" layoutX="268.0" layoutY="413.0" prefHeight="25.0" prefWidth="57.0" style="-fx-background-color: #0000bb;" />
-            <RadioButton fx:id="GetOut1" layoutX="34.0" layoutY="467.0" mnemonicParsing="false" onAction="#getFood" text="GetOut" textFill="WHITE">
-               <font>
-                  <Font name="Cambria" size="18.0" />
-               </font>
-               <toggleGroup>
-                  <ToggleGroup fx:id="Kind1" />
-               </toggleGroup>
-               <effect>
-                  <Blend />
-               </effect>
-            </RadioButton>
-            <RadioButton fx:id="Lodge1" layoutX="33.0" layoutY="504.0" mnemonicParsing="false" onAction="#getFood" text="Lodge" textFill="WHITE">
-               <toggleGroup>
-                  <ToggleGroup fx:id="Kind1" />
-               </toggleGroup>
+            <Spinner fx:id="StartWorkHours" editable="true" layoutX="139.0" layoutY="413.0" prefHeight="25.0" prefWidth="57.0" style="-fx-background-color: #0000bb;" />
+            <Spinner fx:id="EndWorkHours" editable="true" layoutX="268.0" layoutY="413.0" prefHeight="25.0" prefWidth="57.0" style="-fx-background-color: #0000bb;" />
+            <RadioButton fx:id="GetOut" layoutX="34.0" layoutY="467.0" mnemonicParsing="false" onAction="#getFood" text="GetOut" textFill="WHITE">
                <font>
                   <Font name="Cambria" size="18.0" />
                </font>
@@ -184,7 +171,15 @@
                   <Blend />
                </effect>
             </RadioButton>
-            <Spinner fx:id="services1" layoutX="149.0" layoutY="477.0" prefHeight="40.0" prefWidth="71.0" style="-fx-background-color: #0000bb;" />
+            <RadioButton fx:id="Lodge" layoutX="33.0" layoutY="504.0" mnemonicParsing="false" onAction="#getFood" text="Lodge" textFill="WHITE">
+               <font>
+                  <Font name="Cambria" size="18.0" />
+               </font>
+               <effect>
+                  <Blend />
+               </effect>
+            </RadioButton>
+            <Spinner fx:id="services" layoutX="149.0" layoutY="477.0" prefHeight="40.0" prefWidth="71.0" style="-fx-background-color: #0000bb;" />
          </children>
       </Pane>
    </children>

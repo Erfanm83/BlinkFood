@@ -36,7 +36,9 @@ public class Restaurant3Controller extends Checker implements Initializable {
     public TextField FoodPrice31, FoodPrice32, FoodPrice33, FoodPrice34;
     @FXML
     public TextField RestaurantName, RestaurantAddress;
-    ////////////////////////////////////////Buttons
+    //////////////////////////////////////// *** Buttons *** ////////////////////////////////////////
+    @FXML
+    public Button FoodCreate31, FoodCreate32, FoodCreate33, FoodCreate34;
     @FXML
     public Button FoodDelete31, FoodDelete32, FoodDelete33, FoodDelete34;
 
@@ -51,7 +53,7 @@ public class Restaurant3Controller extends Checker implements Initializable {
     private RadioButton GetOut , Lodge;
 
     public String restaurantkind;
-    final ToggleGroup Kind = new ToggleGroup();
+//    final ToggleGroup Kind = new ToggleGroup();
     public void getFood(ActionEvent event) {
         if (GetOut.isSelected()){
             Services.setText("Bikes");
@@ -87,6 +89,64 @@ public class Restaurant3Controller extends Checker implements Initializable {
 //            FoodImage11.setImage(image);
 //            foodImage11 = selectedFile.getAbsolutePath();
         }
+    }
+
+    ////////////////////////////////////////Create Foods
+    public void CreateFood31(ActionEvent event) {
+        FoodCreate31.setVisible(false);
+        FoodCreate31.setDisable(true);
+        Food31.setVisible(true);
+        Food31.setDisable(false);
+    }
+
+    public void CreateFood32(ActionEvent event) {
+        FoodCreate32.setVisible(false);
+        FoodCreate32.setDisable(true);
+        Food32.setVisible(true);
+        Food32.setDisable(false);
+    }
+
+    public void CreateFood33(ActionEvent event) {
+        FoodCreate33.setVisible(false);
+        FoodCreate33.setDisable(true);
+        Food33.setVisible(true);
+        Food33.setDisable(false);
+    }
+
+    public void CreateFood34(ActionEvent event) {
+        FoodCreate34.setVisible(false);
+        FoodCreate34.setDisable(true);
+        Food34.setVisible(true);
+        Food34.setDisable(false);
+    }
+
+    ////////////////////////////////////////Delete Foods
+    public void DeleteFood31(ActionEvent event) {
+        FoodCreate31.setVisible(true);
+        FoodCreate31.setDisable(false);
+        Food31.setVisible(false);
+        Food31.setDisable(true);
+    }
+
+    public void DeleteFood32(ActionEvent event) {
+        FoodCreate32.setVisible(true);
+        FoodCreate32.setDisable(false);
+        Food32.setVisible(false);
+        Food32.setDisable(true);
+    }
+
+    public void DeleteFood33(ActionEvent event) {
+        FoodCreate33.setVisible(true);
+        FoodCreate33.setDisable(false);
+        Food33.setVisible(false);
+        Food33.setDisable(true);
+    }
+
+    public void DeleteFood34(ActionEvent event) {
+        FoodCreate34.setVisible(true);
+        FoodCreate34.setDisable(false);
+        Food34.setVisible(false);
+        Food34.setDisable(true);
     }
 
     public void Restaurant3Submit(ActionEvent e) throws IOException {
@@ -176,8 +236,8 @@ public class Restaurant3Controller extends Checker implements Initializable {
             }
         });
         ///////////////////////////
-        GetOut.setToggleGroup(Kind);
-        Lodge.setToggleGroup(Kind);
+//        GetOut.setToggleGroup(Kind);
+//        Lodge.setToggleGroup(Kind);
         //////////////////////////
         try {
             /////////////////////////////////////////////////////////////////////////

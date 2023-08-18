@@ -50,7 +50,6 @@ public class AdminController extends Checker implements Initializable {
     String HideOrShow2 = "BlinkFood\\src\\Files\\HideOrShow2.txt";
     String HideOrShow3 = "BlinkFood\\src\\Files\\HideOrShow3.txt";
     String HideOrShow4 = "BlinkFood\\src\\Files\\HideOrShow4.txt";
-    String FoodNameAndPrice1 = "BlinkFood\\src\\Files\\FoodName&Price1.txt";
 
     //////////////////////////////////////// *** Back On Action *** ////////////////////////////////////////
     public void Admin(ActionEvent e) throws IOException {

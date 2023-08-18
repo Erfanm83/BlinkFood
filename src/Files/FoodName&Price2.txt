@@ -1,1 +1,1 @@
-FoodName21: kjhfskdj FoodName22: dkfsldhf FoodName23: .zdkjdflsdkjj FoodName24: khff FoodPrice21: kfld FoodPrice22: xjldh FoodPrice23: cm,c.x FoodPrice24: jhkk
+FoodName11: kjhfskdj FoodName12: dkfsldhf FoodName13: .zdkjdflsdkjj FoodName14: khff FoodPrice11: kfld FoodPrice12: xjldh FoodPrice13: cm,c.x FoodPrice14: jhkk RestaurantName: refefe RestaurantKind: Lodge StartWorkHours: 9 EndWorkHours: 9 NumberofServices: 15 RestaurantAddress: twtfdtwf

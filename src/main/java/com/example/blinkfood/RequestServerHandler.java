@@ -38,6 +38,8 @@ public class RequestServerHandler extends Thread {
         String deleteorplus;
         String hideorshow;
         String restaurantcomponent;
+        String imagecomponent;
+        String path;
         try {
             mainWhile:
             while (true) {
@@ -72,7 +74,7 @@ public class RequestServerHandler extends Thread {
                     }
                     case "RestaurantComponent" -> {
                         String r = input.readUTF();
-                        switch (r){
+                        switch (r) {
                             case "Save" -> {
                                 restaurantcomponent = input.readUTF();
                                 RestaurantSaver(restaurantcomponent);
@@ -353,7 +355,7 @@ public class RequestServerHandler extends Thread {
         }
     }
 
-    public void RestaurantLoader(String address) throws IOException{
+    public void RestaurantLoader(String address) throws IOException {
         try {
             File filer = new File(address);
             Scanner scanner = new Scanner(filer);
@@ -396,31 +398,30 @@ public class RequestServerHandler extends Thread {
         }
     }
 
-    public void RestaurantSaver(String address) throws IOException{
+    public void RestaurantSaver(String address) throws IOException {
         //Check Component
-            try {
-                File filer = new File(address);
-                PrintWriter writer = new PrintWriter(filer);
-                writer.write("FoodName11: " + input.readUTF());
-                writer.write(" FoodName12: " + input.readUTF());
-                writer.write(" FoodName13: " + input.readUTF());
-                writer.write(" FoodName14: " + input.readUTF());
-                writer.write(" FoodPrice11: " +  input.readUTF());
-                writer.write(" FoodPrice12: " +  input.readUTF());
-                writer.write(" FoodPrice13: " +  input.readUTF());
-                writer.write(" FoodPrice14: " +  input.readUTF());
-                writer.write(" RestaurantName: " +  input.readUTF());
-                writer.write(" RestaurantKind: " + input.readUTF());
-                writer.write(" StartWorkHours: " + input.readUTF());
-                writer.write(" EndWorkHours: " +  input.readUTF());
-                writer.write(" NumberofServices: " + input.readUTF());
-                writer.write(" RestaurantAddress: " + input.readUTF());
-                writer.close();
-                //Successfull Log
-                System.out.println("User : " + socket.getInetAddress() + " " + "Successfully Restaurants details Saved .");
-            } catch (java.io.IOException exception) {
-                System.out.println("Error writing to file:");
-            }
+        try {
+            File filer = new File(address);
+            PrintWriter writer = new PrintWriter(filer);
+            writer.write("FoodName11: " + input.readUTF());
+            writer.write(" FoodName12: " + input.readUTF());
+            writer.write(" FoodName13: " + input.readUTF());
+            writer.write(" FoodName14: " + input.readUTF());
+            writer.write(" FoodPrice11: " + input.readUTF());
+            writer.write(" FoodPrice12: " + input.readUTF());
+            writer.write(" FoodPrice13: " + input.readUTF());
+            writer.write(" FoodPrice14: " + input.readUTF());
+            writer.write(" RestaurantName: " + input.readUTF());
+            writer.write(" RestaurantKind: " + input.readUTF());
+            writer.write(" StartWorkHours: " + input.readUTF());
+            writer.write(" EndWorkHours: " + input.readUTF());
+            writer.write(" NumberofServices: " + input.readUTF());
+            writer.write(" RestaurantAddress: " + input.readUTF());
+            writer.close();
+            //Successfull Log
+            System.out.println("User : " + socket.getInetAddress() + " " + "Successfully Restaurants details Saved .");
+        } catch (java.io.IOException exception) {
+            System.out.println("Error writing to file:");
+        }
     }
-
 }

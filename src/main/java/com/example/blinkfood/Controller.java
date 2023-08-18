@@ -26,11 +26,6 @@ public class Controller extends Checker implements Initializable {
     Scanner scanner;
     DataInputStream input;
     DataOutputStream output;
-//    FileOutputStream AdminRestaurantsBackground;
-//    FileOutputStream LoginRestaurantsBackground;
-//    FileOutputStream LoginBackground;
-//    FileOutputStream AdminBackground;
-//    FileOutputStream CreateAccountBackground;
 
     ///////////////////////////////////////// *** Strings *** //////////////////////////////////////////
     String username;
@@ -56,13 +51,6 @@ public class Controller extends Checker implements Initializable {
 
     //////////////////////////////////////// *** Buttons *** ////////////////////////////////////////
     @FXML
-    private Button KookooSabzi, Kotlet, Omlet, Soosis,
-            Bandari, Burger, Kentucky, SibZamini,
-            Jigar, Joojeh, Kabab, Shishlik,
-            Italian, Makhloot, Peperoni, Sabzijat,
-            AshReshteh, Dizi, Kashk, Sholeh,
-            Gheymeh, GhormehSabzi, Makaroni, Morgh;
-    @FXML
     private Button Back, Charge;
 
     //////////////////////////////////////// *** Text Fields *** ////////////////////////////////////////
@@ -70,14 +58,6 @@ public class Controller extends Checker implements Initializable {
     private TextField Username, Email, PhoneNumber, Age;
     @FXML
     private TextField AdminUsername, LoginUsername;
-    @FXML
-    private TextField KookooSabziCost, KotletCost, OmletCost, SoosisCost,
-            BandariCost, BurgerCost, KentuckyCost, SibZaminiCost,
-            JigarCost, JoojehCost, KababCost, ShishlikCost,
-            ItalianCost, MakhlootCost, PeperoniCost, SabzijatCost,
-            AshReshtehCost, DiziCost, KashkCost, SholehCost,
-            GheymehCost, GhormehSabziCost, MakaroniCost, MorghCost;
-
     public Controller() throws IOException {
         socket = new Socket("localhost", 12000);
         output = new DataOutputStream(new BufferedOutputStream(socket.getOutputStream()));

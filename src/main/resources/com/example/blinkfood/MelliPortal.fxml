@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="810.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.blinkfood.ControllerPayment">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="810.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.blinkfood.MelliPortal">
    <children>
       <ScrollPane prefHeight="800.0" prefWidth="810.0">
         <content>
@@ -57,7 +57,7 @@
                         <Font size="14.0" />
                      </font>
                   </PasswordField>
-                  <Button id="PooyaPassword" fx:id="PooyaPassword" layoutX="383.0" layoutY="283.0" mnemonicParsing="false" onAction="#password" prefHeight="30.0" prefWidth="111.0" style="-fx-background-radius: 0; -fx-background-color: #ffff;" text="دریافت رمز پویا" textFill="#005eff">
+                  <Button id="PooyaPassword" fx:id="PooyaPassword" layoutX="383.0" layoutY="283.0" mnemonicParsing="false" onAction="#Password" prefHeight="30.0" prefWidth="111.0" style="-fx-background-radius: 0; -fx-background-color: #ffff;" text="دریافت رمز پویا" textFill="#005eff">
                      <font>
                         <Font size="13.0" />
                      </font></Button>
@@ -66,12 +66,12 @@
                         <Font size="14.0" />
                      </font>
                   </TextField>
-                  <Button layoutX="321.0" layoutY="386.0" mnemonicParsing="false" onAction="#PaymentCancel" opacity="0.0" prefHeight="31.0" prefWidth="213.0" style="-fx-background-radius: 25;" text="Cancel">
+                  <Button layoutX="321.0" layoutY="386.0" mnemonicParsing="false" onAction="#LoginRestaurants" opacity="0.0" prefHeight="31.0" prefWidth="213.0" style="-fx-background-radius: 25;" text="Cancel">
                      <font>
                         <Font size="14.0" />
                      </font></Button>
                   <Button layoutX="541.0" layoutY="386.0" mnemonicParsing="false" onAction="#PaymentSubmit" opacity="0.0" prefHeight="31.0" prefWidth="212.0" style="-fx-background-radius: 25;" text="Pay" />
-                  <TextField fx:id="amountpayable" alignment="CENTER" editable="false" layoutX="60.0" layoutY="148.0" prefHeight="25.0" prefWidth="90.0" style="-fx-background-radius: 25;" text="500,000" />
+                  <TextField fx:id="Price" alignment="CENTER" editable="false" layoutX="60.0" layoutY="148.0" prefHeight="25.0" prefWidth="90.0" style="-fx-background-radius: 25;" />
                </children>
             </AnchorPane>
         </content>
