@@ -14,7 +14,7 @@
                 <Image url="@../Image/AdminRestaurants.jpg" />
             </image>
         </ImageView>
-        <Button layoutX="20.0" layoutY="30.0" mnemonicParsing="false" onAction="#Admin" opacity="0.0" prefHeight="40.0" prefWidth="50.0" />
+        <Button layoutX="20.0" layoutY="30.0" mnemonicParsing="false" onAction="#Admin" prefHeight="64.0" prefWidth="64.0" styleClass="backbutton" stylesheets="@BackButtonStyle.css" />
       <Pane fx:id="Restaurant1" layoutX="150.0" layoutY="77.0" prefHeight="275.0" prefWidth="356.0">
          <children>
               <ImageView fitHeight="200.0" fitWidth="356.0" pickOnBounds="true" smooth="false">

@@ -1,0 +1,34 @@
+.submit{
+    -fx-font: Cambria;
+    -fx-font-size: 21px;
+    -fx-background-color: #ae0113;
+    -fx-text-fill: #252323;
+}
+
+.submit:hover{
+    -fx-background-color: #d80000;
+    -fx-text-fill: #f49494;
+    -fx-font-style: Bold;
+}
+
+.createaccount{
+    -fx-background-radius: 25px;
+    -fx-background-color: #c03939;
+    -fx-font: Cambria;
+    -fx-text-fill: #000000;
+}
+
+.createaccount:hover{
+    -fx-text-fill: #ffffff;
+    -fx-font-style: bold;
+}
+
+.username-field{
+    -fx-text-fill: #330808;
+    -fx-background-color: #f66262;
+}
+
+.password-field{
+    -fx-text-fill: #330808;
+    -fx-background-color: #f66262;
+}

@@ -16,17 +16,20 @@
          <image>
             <Image url="@../Image/Admin.png" />
          </image></ImageView>
-       <TextField fx:id="AdminUsername" layoutX="400.0" layoutY="144.0" opacity="0.4" prefHeight="70.0" prefWidth="250.0" promptText="Username">
+       <TextField fx:id="AdminUsername" layoutX="404.0" layoutY="147.0" prefHeight="66.0" prefWidth="245.0" promptText="Username" styleClass="username-field" stylesheets="@FirstPageStyle.css">
            <font>
                <Font size="30.0" />
            </font>
        </TextField>
-       <PasswordField fx:id="AdminPassword" layoutX="400.0" layoutY="282.0" opacity="0.4" prefHeight="70.0" prefWidth="250.0" promptText="Password">
+       <PasswordField fx:id="AdminPassword" layoutX="403.0" layoutY="284.0" prefHeight="66.0" prefWidth="246.0" promptText="Password" styleClass="password-field" stylesheets="@FirstPageStyle.css">
            <font>
                <Font size="30.0" />
            </font>
        </PasswordField>
-       <Button fx:id="Submit" layoutX="480.0" layoutY="393.0" mnemonicParsing="false" onAction="#AdminSubmit" opacity="0.0" prefHeight="42.0" prefWidth="82.0" text="Submit" />
+       <Button fx:id="Submit" alignment="CENTER" contentDisplay="CENTER" layoutX="480.0" layoutY="393.0" mnemonicParsing="false" onAction="#AdminSubmit" prefHeight="47.0" prefWidth="95.0" styleClass="submit" stylesheets="@FirstPageStyle.css" text="Submit" textAlignment="CENTER">
+         <font>
+            <Font name="Cambria" size="21.0" />
+         </font></Button>
        <Button layoutX="455.0" layoutY="505.0" mnemonicParsing="false" onAction="#Admin" opacity="0.0" prefHeight="50.0" prefWidth="50.0" text="Admin" />
        <Button layoutX="540.0" layoutY="505.0" mnemonicParsing="false" onAction="#Login" opacity="0.0" prefHeight="50.0" prefWidth="50.0" text="Login" />
        <Line fx:id="line" endX="45.0" layoutX="457.0" layoutY="565.0" stroke="WHITE" strokeWidth="5.0" />

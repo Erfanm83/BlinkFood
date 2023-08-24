@@ -16,37 +16,37 @@
               <Image url="@../Image/CreateAccount.png" />
           </image>
        </ImageView>
-       <TextField fx:id="Username" layoutX="286.0" layoutY="140.0" opacity="0.4" prefHeight="52.0" prefWidth="202.0" promptText="Username">
+       <TextField fx:id="Username" layoutX="290.0" layoutY="143.0" prefHeight="42.0" prefWidth="196.0" promptText="Username" styleClass="username-field" stylesheets="@FirstPageStyle.css">
            <font>
-               <Font size="24.0" />
+               <Font size="21.0" />
            </font>
        </TextField>
-       <TextField fx:id="Email" layoutX="564.0" layoutY="140.0" opacity="0.4" prefHeight="52.0" prefWidth="202.0" promptText="Email">
+       <TextField fx:id="Email" layoutX="567.0" layoutY="142.0" prefHeight="48.0" prefWidth="196.0" promptText="Email" styleClass="username-field" stylesheets="@FirstPageStyle.css">
            <font>
-               <Font size="24.0" />
+               <Font size="21.0" />
            </font>
        </TextField>
-       <TextField fx:id="PhoneNumber" layoutX="286.0" layoutY="220.0" opacity="0.4" prefHeight="52.0" prefWidth="202.0" promptText="Phone Number">
+       <TextField fx:id="PhoneNumber" layoutX="289.0" layoutY="223.0" prefHeight="37.0" prefWidth="196.0" promptText="Phone Number" styleClass="username-field" stylesheets="@FirstPageStyle.css">
            <font>
-               <Font size="24.0" />
+               <Font size="21.0" />
            </font>
        </TextField>
-       <TextField fx:id="Age" layoutX="564.0" layoutY="220.0" opacity="0.4" prefHeight="52.0" prefWidth="202.0" promptText="Age">
+       <TextField fx:id="Age" layoutX="566.0" layoutY="223.0" prefHeight="42.0" prefWidth="196.0" promptText="Age" styleClass="username-field" stylesheets="@FirstPageStyle.css">
            <font>
-               <Font size="24.0" />
+               <Font size="21.0" />
            </font>
        </TextField>
-       <PasswordField fx:id="Password" layoutX="286.0" layoutY="299.0" opacity="0.4" prefHeight="52.0" prefWidth="202.0" promptText="Password">
+       <PasswordField fx:id="Password" layoutX="290.0" layoutY="302.0" prefHeight="46.0" prefWidth="196.0" promptText="Password" styleClass="password-field" stylesheets="@FirstPageStyle.css">
            <font>
-               <Font size="24.0" />
+               <Font size="21.0" />
            </font>
        </PasswordField>
-       <PasswordField fx:id="ConfirmPassword" layoutX="564.0" layoutY="299.0" opacity="0.4" prefHeight="52.0" prefWidth="202.0" promptText="Confirm Password">
+       <PasswordField fx:id="ConfirmPassword" layoutX="566.0" layoutY="302.0" prefHeight="46.0" prefWidth="196.0" promptText="Confirm Password" styleClass="password-field" stylesheets="@FirstPageStyle.css">
            <font>
-               <Font size="18.0" />
+               <Font size="16.0" />
            </font>
        </PasswordField>
-       <Button fx:id="Submit" layoutX="480.0" layoutY="393.0" mnemonicParsing="false" onAction="#CreateAccountSubmit" opacity="0.0" prefHeight="43.0" prefWidth="82.0" text="Submit" />
+       <Button fx:id="Submit" alignment="CENTER" contentDisplay="CENTER" layoutX="480.0" layoutY="393.0" mnemonicParsing="false" onAction="#CreateAccountSubmit" prefHeight="47.0" prefWidth="97.0" styleClass="submit" stylesheets="@FirstPageStyle.css" text="Submit" textAlignment="CENTER" />
        <Button layoutX="455.0" layoutY="505.0" mnemonicParsing="false" onAction="#Admin" opacity="0.0" prefHeight="50.0" prefWidth="50.0" text="Admin" />
        <Button layoutX="540.0" layoutY="505.0" mnemonicParsing="false" onAction="#Login" opacity="0.0" prefHeight="50.0" prefWidth="50.0" text="Login" />
       <Label fx:id="ErrorLabel" layoutX="286.0" layoutY="454.0" prefHeight="31.0" prefWidth="470.0" textAlignment="CENTER">
